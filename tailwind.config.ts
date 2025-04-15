@@ -32,6 +32,18 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				figo: {
+					purple: {
+						DEFAULT: '#451b47',
+						light: '#d3c5d4',
+						lighter: '#fffaff'
+					},
+					green: {
+						DEFAULT: '#cccc27',
+						muted: '#9e954d',
+						light: '#f0f4e9'
+					}
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
