@@ -1,5 +1,4 @@
-
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -63,7 +62,24 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-figo-purple/10 mt-12 pt-8 text-center text-figo-purple/60 text-sm">
+        <div className="border-t border-figo-purple/10 mt-12 pt-8 text-center text-figo-purple/60 text-sm flex flex-col items-center">
+          <div className="flex space-x-6 mb-4">
+            <a href="https://facebook.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+              <Facebook size={24} />
+            </a>
+            <a href="https://instagram.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+              <Instagram size={24} />
+            </a>
+            <a href="https://linkedin.com/company/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+              <Linkedin size={24} />
+            </a>
+            <a href="https://twitter.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+              <Twitter size={24} />
+            </a>
+            <a href="https://youtube.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+              <Youtube size={24} />
+            </a>
+          </div>
           <p>&copy; {new Date().getFullYear()} Figo. Todos os direitos reservados.</p>
         </div>
       </div>
