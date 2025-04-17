@@ -1,4 +1,3 @@
-
 import { Shield, CreditCard, BarChart4, Smartphone, Percent, CheckCircle } from "lucide-react";
 
 export const AboutSection = () => {
@@ -16,7 +15,7 @@ export const AboutSection = () => {
     { 
       icon: Smartphone, 
       title: "Pagamentos multicanal e flexíveis", 
-      description: "Aceite Pix, carteiras digitais, links de pagamento e assinaturas recorrentes com agilidade e segurança, operando via SmartPOS, Pinpad, desktop ou celular — adaptável ao seu modelo de negócio." 
+      description: "Aceite Pix, carteiras digitais, links de pagamento e assinaturas recorrentes com agilidade e segurança, operando via SmartPOS, Pinpad, desktop ou celular, adaptável ao seu modelo de negócio." 
     },
     { 
       icon: Shield, 
