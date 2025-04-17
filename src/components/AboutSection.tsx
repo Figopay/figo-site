@@ -42,13 +42,10 @@ export const AboutSection = () => {
             Sobre a <span className="text-figo-green">Figo</span>
           </h2>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto">
-            A Figo é uma plataforma completa que reúne todos os meios de pagamento e serviços financeiros em um só lugar.
+            Somos a única solução multiadquirente e multicanal que simplifica as transações do varejo com roteamento automático da melhor taxa para cada venda — garantindo mais economia e eficiência para o seu negócio. Também atuamos como um marketplace de serviços financeiros, oferecendo soluções que geram valor para o varejo e ampliam as possibilidades de receita.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            Somos a única solução multiadquirente e multicanal que simplifica as transações do varejo com roteamento automático da melhor taxa para cada venda — garantindo mais economia e eficiência para o seu negócio.
-          </p>
-          <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            Também atuamos como um marketplace de serviços financeiros, oferecendo soluções que geram valor para o varejo e ampliam as possibilidades de receita.
+            <strong>A Figo é uma plataforma completa que reúne todos os meios de pagamento e serviços financeiros em um só lugar.</strong>
           </p>
         </div>
 
