@@ -34,7 +34,7 @@ export const PartnersSection = () => {
             <div className="bg-white/10 p-4 rounded-lg inline-block mb-6">
               <PenTool className="h-8 w-8 text-figo-green" />
             </div>
-            <h3 className="font-bold text-xl mb-4">White-label</h3>
+            <h3 className="font-bold text-xl mb-4">Personalização Total</h3>
             <p className="text-white/80 mb-6">
               Personalize completamente nossa solução com sua marca. Ofereça uma experiência única para seus clientes mantendo total controle sobre a identidade visual.
             </p>
@@ -62,4 +62,3 @@ export const PartnersSection = () => {
     </section>
   );
 };
-

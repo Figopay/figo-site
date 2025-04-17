@@ -1,3 +1,4 @@
+
 import { Shield, Zap, RefreshCw, PieChart, BarChart4, Smartphone } from "lucide-react";
 
 export const AboutSection = () => {
@@ -24,7 +25,7 @@ export const AboutSection = () => {
     },
     { 
       icon: BarChart4, 
-      title: "Solução white-label", 
+      title: "Solução personalizada", 
       description: "Personalize completamente a plataforma com sua marca" 
     },
     { 
