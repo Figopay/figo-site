@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Smartphone, Zap, Lock, Layers, Truck } from "lucide-react";
 import { Button } from "./ui/button";
@@ -43,7 +44,7 @@ export const TapOnPhoneSection = () => {
               <div className="inline-block bg-figo-green/10 p-3 rounded-full mb-4">
                 <Smartphone className="h-7 w-7 text-figo-green" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-figo-green mb-4">
                 Tap on Phone: transforme qualquer celular em uma maquininha
               </h2>
               <p className="text-xl font-medium text-white/90 mb-8">
