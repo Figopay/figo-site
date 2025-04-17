@@ -1,37 +1,37 @@
 
-import { Shield, Zap, RefreshCw, PieChart, BarChart4, Smartphone } from "lucide-react";
+import { Shield, Zap, RefreshCw, CreditCard, BarChart4, Smartphone, Percent, ArrowRight, CheckCircle } from "lucide-react";
 
 export const AboutSection = () => {
   const features = [
     { 
-      icon: RefreshCw, 
-      title: "Roteamento automático", 
-      description: "Utilize a melhor taxa para cada transação de forma automática e inteligente" 
+      icon: CreditCard, 
+      title: "Plataforma Multiadquirente", 
+      description: "Centralize todas as adquirentes em um único equipamento e dê autonomia ao varejista para escolher a melhor opção a cada venda." 
     },
     { 
-      icon: PieChart, 
+      icon: Percent, 
       title: "Economia de até 20%", 
-      description: "Reduza custos significativamente nas taxas de suas transações financeiras" 
+      description: "Reduza custos com o roteamento automático da melhor taxa por transação, otimizando sua operação financeira de forma inteligente." 
     },
     { 
       icon: Smartphone, 
-      title: "Múltiplos dispositivos", 
-      description: "Operação via SmartPOS, Pinpad, celular ou desktop" 
+      title: "Pagamentos diversos em qualquer canal", 
+      description: "Aceite Pix, carteiras digitais, links de pagamento e assinaturas recorrentes com agilidade e segurança, operando via SmartPOS, Pinpad, desktop ou celular — adaptável ao seu modelo de negócio." 
     },
     { 
       icon: Shield, 
-      title: "Pagamentos diversos", 
-      description: "Vendas por Pix, carteiras digitais, links e assinaturas" 
+      title: "Serviços financeiros integrados", 
+      description: "Ofereça ao seu cliente soluções que vão além do pagamento, com serviços financeiros complementares que aumentam a rentabilidade." 
     },
     { 
       icon: BarChart4, 
-      title: "Solução personalizada", 
-      description: "Personalize completamente a plataforma com sua marca" 
+      title: "Gestão de assinaturas inteligente", 
+      description: "Ofereça serviços recorrentes de forma prática e segura, com cobranças mensais sem comprometer o limite do cartão de crédito do cliente — ideal para fidelização e aumento da receita previsível." 
     },
     { 
-      icon: Zap, 
-      title: "APIs modernas", 
-      description: "Integração simples e rápida com sistemas existentes" 
+      icon: CheckCircle, 
+      title: "Ampla rede de varejistas", 
+      description: "Presente em centenas de estabelecimentos, conectando indústria, serviços e consumidores com agilidade e escala." 
     },
   ];
 
@@ -48,6 +48,12 @@ export const AboutSection = () => {
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
             <strong>A Figo é uma plataforma completa que reúne todos os meios de pagamento e serviços financeiros em um só lugar.</strong>
           </p>
+        </div>
+
+        <div className="text-center mb-12">
+          <h3 className="text-2xl font-bold text-figo-purple">
+            Principais diferenciais da <span className="text-figo-green">Figo</span>
+          </h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
