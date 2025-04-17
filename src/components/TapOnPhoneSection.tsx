@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Smartphone, Zap, Lock, Layers, Truck } from "lucide-react";
 import { Button } from "./ui/button";
 import { AspectRatio } from "./ui/aspect-ratio";
@@ -38,7 +38,6 @@ export const TapOnPhoneSection = () => {
     <section className="py-20 bg-figo-purple">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Coluna de conteúdo */}
           <div className="animate-fade-in-up">
             <div className="text-center lg:text-left mb-10">
               <div className="inline-block bg-figo-green/10 p-3 rounded-full mb-4">
@@ -62,7 +61,6 @@ export const TapOnPhoneSection = () => {
             </div>
           </div>
 
-          {/* Coluna de imagem */}
           <div className="lg:pl-8 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
             <div className="rounded-2xl overflow-hidden bg-white/10 p-4">
               <AspectRatio ratio={4/3} className="bg-figo-purple-light rounded-xl overflow-hidden">
@@ -76,7 +74,6 @@ export const TapOnPhoneSection = () => {
           </div>
         </div>
 
-        {/* Bullets em carrossel */}
         <div className="mt-16 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
           <h3 className="text-xl md:text-2xl font-bold text-white mb-8 text-center">
             Vantagens do Tap on Phone com a Figo:
@@ -104,8 +101,16 @@ export const TapOnPhoneSection = () => {
               ))}
             </CarouselContent>
             <div className="flex justify-center gap-2 mt-4">
-              <CarouselPrevious className="relative left-0 right-auto h-8 w-8 rounded-sm bg-figo-green/20 hover:bg-figo-green/30 border-0" />
-              <CarouselNext className="relative right-0 left-auto h-8 w-8 rounded-sm bg-figo-green/20 hover:bg-figo-green/30 border-0" />
+              <CarouselPrevious 
+                className="relative left-0 right-auto h-8 w-8 rounded-full 
+                bg-figo-green text-figo-purple hover:bg-figo-green/80 
+                border-0 transition-colors duration-300"
+              />
+              <CarouselNext 
+                className="relative right-0 left-auto h-8 w-8 rounded-full 
+                bg-figo-green text-figo-purple hover:bg-figo-green/80 
+                border-0 transition-colors duration-300"
+              />
             </div>
           </Carousel>
         </div>
