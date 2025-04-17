@@ -48,9 +48,9 @@ export const PartnersSection = () => {
             <div className="bg-white/10 p-4 rounded-lg inline-block mb-6">
               <Building className="h-8 w-8 text-figo-green" />
             </div>
-            <h3 className="font-bold text-xl mb-4">Geração de receita</h3>
+            <h3 className="font-bold text-xl mb-4">Geração de valor</h3>
             <p className="text-white/80 mb-6">
-              Programa de rebates competitivo para parceiros. Receba comissões recorrentes por cada transação e serviço utilizado por seus clientes.
+              Seja o agente de transformação do varejo, levando inovação, tecnologia e eficiência para seus clientes com a Figo. Uma oportunidade de fortalecer relacionamentos e ampliar sua atuação com uma solução completa e moderna.
             </p>
             <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
               Seja um parceiro
@@ -62,3 +62,4 @@ export const PartnersSection = () => {
     </section>
   );
 };
+
