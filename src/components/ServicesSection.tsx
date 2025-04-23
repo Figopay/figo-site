@@ -1,5 +1,4 @@
-
-import { CreditCard, Gift, Wallet, Smartphone, Car, Split, Ticket, PiggyBank } from "lucide-react";
+import { CreditCard, Gift, Wallet, Smartphone, Split, PiggyBank } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 export const ServicesSection = () => {
@@ -21,24 +20,14 @@ export const ServicesSection = () => {
       description: "Proteções acessíveis para equipamentos e compras"
     },
     {
-      icon: Car,
-      title: "Parcelamento de multas e IPVA",
-      description: "Facilite o pagamento de débitos veiculares para seus clientes"
-    },
-    {
       icon: Split,
       title: "Split de pagamento",
       description: "Divisão automática de valores entre múltiplos beneficiários"
     },
     {
-      icon: Ticket,
-      title: "Vouchers (iFood, Uber)",
-      description: "Comercialize créditos para diversos serviços populares"
-    },
-    {
-      icon: Gift,
-      title: "Programas de fidelidade",
-      description: "Crie e gerencie campanhas de pontos customizadas"
+      icon: PiggyBank,
+      title: "PIX",
+      description: "Receba pagamentos via PIX com total segurança e praticidade"
     },
     {
       icon: PiggyBank,
@@ -60,7 +49,7 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}

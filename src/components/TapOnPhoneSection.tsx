@@ -1,40 +1,10 @@
 
 import React from "react";
-import { Smartphone, Zap, Lock, Layers, Truck } from "lucide-react";
+import { Smartphone } from "lucide-react";
 import { Button } from "./ui/button";
 import { AspectRatio } from "./ui/aspect-ratio";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 export const TapOnPhoneSection = () => {
-  const advantages = [
-    {
-      icon: Smartphone,
-      text: "Funciona em celulares Android com NFC"
-    },
-    {
-      icon: Zap,
-      text: "Não requer hardware adicional"
-    },
-    {
-      icon: Layers,
-      text: "Totalmente integrado à plataforma Figo"
-    },
-    {
-      icon: Lock,
-      text: "Rápido, seguro e prático"
-    },
-    {
-      icon: Truck,
-      text: "Perfeito para operações leves e multicanal"
-    }
-  ];
-
   return (
     <section className="py-20 bg-figo-purple">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +15,7 @@ export const TapOnPhoneSection = () => {
                 <Smartphone className="h-7 w-7 text-figo-green" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-figo-green mb-4">
-                Tap on Phone: transforme qualquer celular em uma maquininha
+                Transforme qualquer celular em uma maquininha, com a tecnologia Tap On Phone
               </h2>
               <p className="text-xl font-medium text-white/90 mb-8">
                 Aceite pagamentos por aproximação direto no celular. Sem equipamentos, sem complicações.
@@ -54,7 +24,7 @@ export const TapOnPhoneSection = () => {
 
             <div className="mb-12 text-lg text-white/80 space-y-6" style={{ animationDelay: "100ms" }}>
               <p>
-                Com a tecnologia Tap on Phone, a Figo permite que o varejista aceite pagamentos por aproximação (NFC) diretamente no celular Android, sem precisar de maquininhas físicas.
+                Com a tecnologia Tap on Phone, a Figo permite que o varejista aceite pagamentos por aproximação diretamente no celular sem precisar de maquininhas.
               </p>
               <p>
                 Ideal para vendedores externos, autônomos, delivery e operações com mobilidade, essa funcionalidade entrega agilidade, economia e segurança com a mesma qualidade dos meios tradicionais.
@@ -73,47 +43,6 @@ export const TapOnPhoneSection = () => {
               </AspectRatio>
             </div>
           </div>
-        </div>
-
-        <div className="mt-16 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-            Vantagens do Tap on Phone com a Figo:
-          </h3>
-          
-          <Carousel 
-            className="w-full max-w-4xl mx-auto"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
-            <CarouselContent>
-              {advantages.map((advantage, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div 
-                    className="flex items-center p-4 bg-white/10 rounded-lg backdrop-blur-sm h-full mx-2"
-                  >
-                    <div className="bg-figo-green/10 p-2 rounded-none mr-3">
-                      <advantage.icon className="h-5 w-5 text-figo-green" />
-                    </div>
-                    <span className="text-white font-medium">{advantage.text}</span>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center gap-2 mt-4">
-              <CarouselPrevious 
-                className="relative left-0 right-auto h-8 w-8 rounded-full 
-                bg-figo-green text-figo-purple hover:bg-figo-green/80 
-                border-0 transition-colors duration-300"
-              />
-              <CarouselNext 
-                className="relative right-0 left-auto h-8 w-8 rounded-full 
-                bg-figo-green text-figo-purple hover:bg-figo-green/80 
-                border-0 transition-colors duration-300"
-              />
-            </div>
-          </Carousel>
         </div>
 
         <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: "800ms" }}>

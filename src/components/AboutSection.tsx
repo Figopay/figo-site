@@ -1,3 +1,4 @@
+
 import { Shield, CreditCard, BarChart4, Smartphone, Percent, CheckCircle } from "lucide-react";
 
 export const AboutSection = () => {
@@ -5,7 +6,7 @@ export const AboutSection = () => {
     { 
       icon: CreditCard, 
       title: "Plataforma Multiadquirente", 
-      description: "Centralize todas as adquirentes em um único equipamento e dê autonomia ao varejista para escolher a melhor opção a cada venda." 
+      description: "Centralize todas as adquirentes em um único equipamento e tenha autonomia para escolher a melhor opção a cada venda." 
     },
     { 
       icon: Percent, 
@@ -20,7 +21,7 @@ export const AboutSection = () => {
     { 
       icon: Shield, 
       title: "Serviços financeiros integrados", 
-      description: "Ofereça ao seu cliente soluções que vão além do pagamento, com serviços financeiros complementares que aumentam a rentabilidade." 
+      description: "Ofereça ao seu cliente a conveniencia de oferecer serviços que vão além do pagamento, serviços financeiros complementares que aumentam a rentabilidade." 
     },
     { 
       icon: BarChart4, 
@@ -30,7 +31,7 @@ export const AboutSection = () => {
     { 
       icon: CheckCircle, 
       title: "Ampla rede de varejistas", 
-      description: "Presente em centenas de estabelecimentos, conectando indústria, serviços e consumidores com agilidade e escala." 
+      description: "Presente em +2000 estabelecimentos, ajudando o varejista a Economizar, Crescer e Gerir melhor" 
     },
   ];
 
