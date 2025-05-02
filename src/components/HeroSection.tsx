@@ -27,20 +27,12 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
-            <div className="bg-gradient-to-br from-figo-purple to-figo-purple-light rounded-lg shadow-xl p-8 aspect-[4/3] flex items-center justify-center">
-              <div className="text-center">
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20">
-                  <h3 className="text-figo-green-light font-bold text-xl mb-6">A plataforma completa para seu negócio</h3>
-                  <div className="grid grid-cols-3 gap-4 text-white">
-                    <div className="p-3 bg-white/10 rounded-lg">PIX</div>
-                    <div className="p-3 bg-white/10 rounded-lg">Cartão</div>
-                    <div className="p-3 bg-white/10 rounded-lg">Digital</div>
-                    <div className="p-3 bg-white/10 rounded-lg">Links</div>
-                    <div className="p-3 bg-white/10 rounded-lg">API</div>
-                    <div className="p-3 bg-white/10 rounded-lg">Serviços</div>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-gradient-to-br from-figo-purple to-figo-purple-light rounded-lg shadow-xl p-4 md:p-6">
+              <img 
+                src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
+                alt="Plataforma Figo com terminais de pagamento conectados a múltiplos estabelecimentos"
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
         </div>
