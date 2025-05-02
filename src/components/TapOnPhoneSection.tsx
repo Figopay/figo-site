@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Smartphone } from "lucide-react";
-import { Button } from "./ui/button";
 import { AspectRatio } from "./ui/aspect-ratio";
 
 export const TapOnPhoneSection = () => {
@@ -43,15 +42,6 @@ export const TapOnPhoneSection = () => {
               </AspectRatio>
             </div>
           </div>
-        </div>
-
-        <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: "800ms" }}>
-          <Button 
-            className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium text-lg px-8 py-6 h-auto" 
-            size="lg"
-          >
-            ➡️ Quero ativar o Tap on Phone
-          </Button>
         </div>
       </div>
     </section>
