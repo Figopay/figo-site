@@ -27,11 +27,11 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
-            <div className="p-0">
+            <div className="p-0 flex justify-center">
               <img 
                 src="/lovable-uploads/26649d1d-e782-4d5a-a032-65e5934b4d99.png"
                 alt="Terminal de pagamento Figo com aplicativo aberto mostrando interface e funcionalidades"
-                className="w-full h-auto"
+                className="w-[130%] h-auto"
               />
             </div>
           </div>
