@@ -27,7 +27,7 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
-            <div className="bg-gradient-to-br from-figo-purple to-figo-purple-light rounded-lg shadow-xl p-4 md:p-6">
+            <div className="rounded-lg shadow-xl p-2">
               <img 
                 src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
                 alt="Plataforma Figo com terminais de pagamento conectados a múltiplos estabelecimentos"
