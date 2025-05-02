@@ -29,8 +29,8 @@ export const HeroSection = () => {
           <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
             <div className="p-0">
               <img 
-                src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
-                alt="Plataforma Figo com terminais de pagamento conectados a múltiplos estabelecimentos"
+                src="/lovable-uploads/26649d1d-e782-4d5a-a032-65e5934b4d99.png"
+                alt="Terminal de pagamento Figo com aplicativo aberto mostrando interface e funcionalidades"
                 className="w-full h-auto"
               />
             </div>
