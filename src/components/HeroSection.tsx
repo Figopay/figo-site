@@ -1,3 +1,4 @@
+
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -114,7 +115,7 @@ export const HeroSection = () => {
                     <img 
                       src="/lovable-uploads/2268b6e1-4db9-4850-b09f-4a8b141e4dc1.png" 
                       alt="Smartphones mostrando o aplicativo Figo com funcionalidades de pagamento"
-                      className="w-[130%] h-auto rounded-lg shadow-lg object-contain"
+                      className="w-[180%] h-auto rounded-lg object-contain" 
                     />
                   </div>
                 </div>
