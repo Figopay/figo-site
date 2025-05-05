@@ -23,10 +23,13 @@ export const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center flex-shrink-0">
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-figo-purple">
-                <span>Figo</span>
-                <span className="text-figo-green">.</span>
-              </div>
+              <a href="#home">
+                <img 
+                  src="/lovable-uploads/425a4488-2866-41f7-b642-dfe510a5e328.png" 
+                  alt="Figo Logo" 
+                  className="h-10"
+                />
+              </a>
             </div>
           </div>
           

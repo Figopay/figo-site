@@ -7,9 +7,12 @@ export const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
-            <div className="text-2xl font-bold text-figo-purple mb-4">
-              <span>Figo</span>
-              <span className="text-figo-green">.</span>
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/425a4488-2866-41f7-b642-dfe510a5e328.png" 
+                alt="Figo Logo" 
+                className="h-12"
+              />
             </div>
             <p className="text-figo-purple/70 mb-6">
               A única plataforma multiadquirente que unifica todos os pagamentos e serviços financeiros em um só lugar.
