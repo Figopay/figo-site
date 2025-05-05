@@ -15,7 +15,7 @@ export const Footer = () => {
               />
             </div>
             <p className="text-figo-purple/70 mb-6">
-              A única plataforma multiadquirente que unifica todos os pagamentos e serviços financeiros em um só lugar.
+              A Figo é uma plataforma completa que reúne todos os meios de pagamento, serviços financeiros e catálogo de produtos para venda em um só lugar.
             </p>
           </div>
 
