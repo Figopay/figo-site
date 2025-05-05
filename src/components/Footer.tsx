@@ -39,11 +39,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-figo-green mr-2" />
-                <span className="text-figo-purple/70">contato@figo.com.br</span>
+                <span className="text-figo-purple/70">contato@figopay.com.br</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-figo-green mr-2 mt-1" />
-                <span className="text-figo-purple/70">Av. Paulista, 1000<br />São Paulo - SP</span>
+                <span className="text-figo-purple/70">Av.Andromeda, 855 - Alphavile<br />Barueri - SP</span>
               </li>
             </ul>
           </div>
