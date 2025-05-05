@@ -50,7 +50,7 @@ export const HeroSection = () => {
               </div>
             </CarouselItem>
 
-            {/* Second slide - Physical Marketplace */}
+            {/* Second slide - Updated with new image */}
             <CarouselItem>
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
@@ -76,8 +76,8 @@ export const HeroSection = () => {
                 <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
                   <div className="p-0 flex justify-center">
                     <img 
-                      src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
-                      alt="Marketplace físico Figo mostrando pessoas comprando em lojas e utilizando a plataforma"
+                      src="/lovable-uploads/40980156-6431-498f-80a3-348c713138d4.png"
+                      alt="Terminais de pagamento Figo com aplicativo aberto mostrando interface do marketplace físico"
                       className="w-[130%] h-auto rounded-lg shadow-lg"
                     />
                   </div>
