@@ -78,7 +78,7 @@ export const HeroSection = () => {
                     <img 
                       src="/lovable-uploads/40980156-6431-498f-80a3-348c713138d4.png"
                       alt="Terminais de pagamento Figo com aplicativo aberto mostrando interface do marketplace físico"
-                      className="w-[130%] h-auto rounded-lg shadow-lg"
+                      className="w-[130%] h-auto"
                     />
                   </div>
                 </div>
