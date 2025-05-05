@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -113,9 +112,9 @@ export const HeroSection = () => {
                 <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
                   <div className="p-0 flex justify-center">
                     <img 
-                      src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                      alt="Demonstração de pagamento com tecnologia Tap on Phone"
-                      className="w-[130%] h-auto rounded-lg shadow-lg object-cover"
+                      src="/lovable-uploads/2268b6e1-4db9-4850-b09f-4a8b141e4dc1.png" 
+                      alt="Smartphones mostrando o aplicativo Figo com funcionalidades de pagamento"
+                      className="w-[130%] h-auto rounded-lg shadow-lg object-contain"
                     />
                   </div>
                 </div>
