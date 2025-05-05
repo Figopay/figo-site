@@ -7,7 +7,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const navigation = [
   { name: "Home", href: "#home" },
   { name: "Sobre", href: "#sobre" },
-  { name: "Desafios do Varejo", href: "#desafios" },
   { name: "Serviços", href: "#servicos" },
   { name: "Para Parceiros", href: "#parceiros" },
 ];

@@ -26,7 +26,7 @@ export const ChallengesSection = () => {
   ];
 
   return (
-    <section id="desafios" className="py-20 bg-white">
+    <section className="pt-0 pb-20 bg-figo-purple-lighter">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-block bg-figo-purple/5 p-2 px-4 rounded-full mb-4">
