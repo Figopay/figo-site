@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -56,12 +56,6 @@ export const Footer = () => {
             </a>
             <a href="https://linkedin.com/company/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
               <Linkedin size={24} />
-            </a>
-            <a href="https://twitter.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
-              <Twitter size={24} />
-            </a>
-            <a href="https://youtube.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
-              <Youtube size={24} />
             </a>
           </div>
           <p>&copy; {new Date().getFullYear()} Figo. Todos os direitos reservados.</p>
