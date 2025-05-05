@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import { Smartphone } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -78,6 +79,43 @@ export const HeroSection = () => {
                       src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
                       alt="Marketplace físico Figo mostrando pessoas comprando em lojas e utilizando a plataforma"
                       className="w-[130%] h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </CarouselItem>
+
+            {/* New third slide - Tap On Phone */}
+            <CarouselItem>
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
+                  <div className="max-w-lg">
+                    <div className="inline-block bg-figo-green/10 p-3 rounded-full mb-4">
+                      <Smartphone className="h-7 w-7 text-figo-green" />
+                    </div>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-figo-purple mb-4 animate-fade-in-up">
+                      Transforme seu <span className="text-figo-green">celular</span> <br />
+                      em uma maquininha
+                    </h1>
+                    <p className="text-lg md:text-xl text-figo-purple/80 mb-8 animate-fade-in-up animate-delay-200">
+                      Aceite pagamentos por aproximação direto no celular. Sem equipamentos, sem complicações.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
+                      <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
+                        Começar agora
+                      </Button>
+                      <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
+                        Ver demonstração
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
+                  <div className="p-0 flex justify-center">
+                    <img 
+                      src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                      alt="Demonstração de pagamento com tecnologia Tap on Phone"
+                      className="w-[130%] h-auto rounded-lg shadow-lg object-cover"
                     />
                   </div>
                 </div>
