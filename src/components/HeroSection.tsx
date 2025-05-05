@@ -8,10 +8,20 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import { Smartphone } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const WHATSAPP_LINK = "https://wa.me/5511916629760";
 
 export const HeroSection = () => {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Preload the first hero image
+    const preloadImage = new Image();
+    preloadImage.src = "/lovable-uploads/26649d1d-e782-4d5a-a032-65e5934b4d99.png";
+    preloadImage.onload = () => setImagesLoaded(true);
+  }, []);
+
   return (
     <section id="home" className="pt-28 pb-20 md:pt-36 md:pb-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,6 +60,12 @@ export const HeroSection = () => {
                       src="/lovable-uploads/26649d1d-e782-4d5a-a032-65e5934b4d99.png"
                       alt="Terminal de pagamento Figo com aplicativo aberto mostrando interface e funcionalidades"
                       className="w-[130%] h-auto"
+                      loading="eager"
+                      fetchpriority="high"
+                      style={{
+                        opacity: imagesLoaded ? 1 : 0,
+                        transition: "opacity 0.3s ease-in-out"
+                      }}
                     />
                   </div>
                 </div>
@@ -89,6 +105,7 @@ export const HeroSection = () => {
                       src="/lovable-uploads/40980156-6431-498f-80a3-348c713138d4.png"
                       alt="Terminais de pagamento Figo com aplicativo aberto mostrando interface do marketplace físico"
                       className="w-[130%] h-auto"
+                      loading="lazy"
                     />
                   </div>
                 </div>
