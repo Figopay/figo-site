@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, WhatsApp } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const navigation = [
@@ -39,8 +39,9 @@ export const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-              Contato
+            <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center gap-2">
+              <WhatsApp size={18} />
+              Chamar agora
             </Button>
           </nav>
           
@@ -72,8 +73,9 @@ export const Header = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                Contato
+              <Button className="w-full bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center justify-center gap-2">
+                <WhatsApp size={18} />
+                Chamar agora
               </Button>
             </div>
           </div>
