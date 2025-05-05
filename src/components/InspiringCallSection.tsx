@@ -1,6 +1,6 @@
 
 import { Button } from "./ui/button";
-import { ArrowRight, WhatsApp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/5511916629760";
 
