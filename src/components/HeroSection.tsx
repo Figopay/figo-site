@@ -61,7 +61,7 @@ export const HeroSection = () => {
                       alt="Terminal de pagamento Figo com aplicativo aberto mostrando interface e funcionalidades"
                       className="w-[130%] h-auto"
                       loading="eager"
-                      fetchpriority="high"
+                      fetchPriority="high"
                       style={{
                         opacity: imagesLoaded ? 1 : 0,
                         transition: "opacity 0.3s ease-in-out"

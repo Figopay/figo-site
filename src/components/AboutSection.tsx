@@ -46,7 +46,10 @@ export const AboutSection = () => {
             Somos a única solução multiadquirente e multicanal que simplifica as transações do varejo com roteamento automático da melhor taxa para cada venda — garantindo mais economia e eficiência para o seu negócio. Também atuamos como um marketplace de serviços financeiros, oferecendo soluções que geram valor para o varejo e ampliam as possibilidades de receita.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            <strong>A Figo é uma plataforma completa que reúne todos os meios de pagamento e serviços financeiros em um só lugar.</strong>
+            Com a Figo.Shop, levamos o conceito de marketplace para o mundo físico, conectando lojistas a uma prateleira infinita de produtos com gestão automatizada de repasses via split de pagamento.
+          </p>
+          <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
+            <strong>A Figo é uma plataforma completa que reúne todos os meios de pagamento, serviços financeiros e catálogo de produtos para venda em um só lugar.</strong>
           </p>
         </div>
 
