@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -78,9 +77,8 @@ export const HeroSection = () => {
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
                   <div className="max-w-lg">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-figo-purple mb-4 animate-fade-in-up">
-                      O Primeiro <br />
-                      <span className="text-figo-green">Marketplace Físico</span> <br />
-                      do Mundo
+                      <span className="text-figo-green">Primeiro Marketplace</span> <br />
+                      do mundo físico
                     </h1>
                     <p className="text-lg md:text-xl text-figo-purple/80 mb-8 animate-fade-in-up animate-delay-200">
                       Revolucionamos o comércio físico unificando vendedores e compradores em uma única plataforma integrada, com todas as soluções necessárias para o seu negócio.
