@@ -9,6 +9,8 @@ import {
 } from "./ui/carousel";
 import { Smartphone } from "lucide-react";
 
+const WHATSAPP_LINK = "https://wa.me/5511916629760";
+
 export const HeroSection = () => {
   return (
     <section id="home" className="pt-28 pb-20 md:pt-36 md:pb-28">
@@ -29,12 +31,16 @@ export const HeroSection = () => {
                       A Figo é a única plataforma multiadquirente que unifica todos os pagamentos e serviços financeiros em um só lugar.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                        Conhecer soluções
-                      </Button>
-                      <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
-                        Fale com um especialista
-                      </Button>
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
+                          Conhecer soluções
+                        </Button>
+                      </a>
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
+                          Fale com um especialista
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -64,12 +70,16 @@ export const HeroSection = () => {
                       Revolucionamos o comércio físico unificando vendedores e compradores em uma única plataforma integrada, com todas as soluções necessárias para o seu negócio.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                        Saiba mais
-                      </Button>
-                      <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
-                        Como funciona
-                      </Button>
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
+                          Saiba mais
+                        </Button>
+                      </a>
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
+                          Como funciona
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -101,12 +111,16 @@ export const HeroSection = () => {
                       Aceite pagamentos por aproximação direto no celular. Sem equipamentos, sem complicações.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                        Começar agora
-                      </Button>
-                      <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
-                        Ver demonstração
-                      </Button>
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
+                          Começar agora
+                        </Button>
+                      </a>
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
+                          Ver demonstração
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -11,6 +11,8 @@ const navigation = [
   { name: "Parceiros", href: "#parceiros" },
 ];
 
+const WHATSAPP_LINK = "https://wa.me/5511916629760";
+
 export const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const isMobile = useIsMobile();
@@ -39,10 +41,12 @@ export const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center gap-2">
-              <Phone size={18} />
-              Chamar agora
-            </Button>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center gap-2">
+                <Phone size={18} />
+                Chamar agora
+              </Button>
+            </a>
           </nav>
           
           {/* Mobile menu button */}
@@ -73,10 +77,12 @@ export const Header = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center justify-center gap-2">
-                <Phone size={18} />
-                Chamar agora
-              </Button>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full block">
+                <Button className="w-full bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center justify-center gap-2">
+                  <Phone size={18} />
+                  Chamar agora
+                </Button>
+              </a>
             </div>
           </div>
         </div>

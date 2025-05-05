@@ -2,6 +2,8 @@
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 
+const WHATSAPP_LINK = "https://wa.me/5511916629760";
+
 export const InspiringCallSection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-figo-purple to-figo-purple/90 text-white">
@@ -16,13 +18,17 @@ export const InspiringCallSection = () => {
             "Assim como o figo simboliza a fertilidade que floresce da terra, a Figo nasce para cultivar o sucesso dos varejistas, nutrindo sonhos e transformando desafios em prosperidade."
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-            <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium min-w-[180px]">
-              Comece agora
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 min-w-[180px]">
-              Fale conosco
-            </Button>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium min-w-[180px]">
+                Comece agora
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 min-w-[180px]">
+                Fale conosco
+              </Button>
+            </a>
           </div>
         </div>
       </div>
