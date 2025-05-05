@@ -113,8 +113,8 @@ export const HeroSection = () => {
                 <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
                   <div className="p-0 flex justify-center">
                     <img 
-                      src="/lovable-uploads/2268b6e1-4db9-4850-b09f-4a8b141e4dc1.png" 
-                      alt="Smartphones mostrando o aplicativo Figo com funcionalidades de pagamento"
+                      src="/lovable-uploads/d4714528-53f2-463b-a05f-0a88b5c13773.png" 
+                      alt="Smartphones mostrando o aplicativo Figo com funcionalidades de pagamento e marketplace"
                       className="w-[250%] h-auto object-contain" 
                     />
                   </div>
