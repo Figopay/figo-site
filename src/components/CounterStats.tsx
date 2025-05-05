@@ -18,29 +18,29 @@ export const CounterStats = () => {
     {
       icon: Building2,
       value: counts[0],
-      targetValue: 2000,
+      targetValue: 2100,
       label: "Lojas",
       prefix: "+",
     },
     {
       icon: DollarSign,
       value: counts[1],
-      targetValue: 500,
-      label: "Milhões transacionados",
+      targetValue: 150,
+      label: "Milhões transacionados mês",
       prefix: "R$",
       suffix: "M",
     },
     {
       icon: CreditCard,
       value: counts[2],
-      targetValue: 5000,
+      targetValue: 3800,
       label: "Equipamentos",
       prefix: "+",
     },
     {
       icon: MapPin,
       value: counts[3],
-      targetValue: 27,
+      targetValue: 10,
       label: "Estados",
     },
   ];
@@ -67,7 +67,7 @@ export const CounterStats = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-figo-purple text-white">
+    <section className="py-16 bg-figo-purple text-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -84,6 +84,7 @@ export const CounterStats = () => {
             </div>
           ))}
         </div>
+        <div className="absolute bottom-2 right-4 text-xs text-white/50">* Dados Payer</div>
       </div>
     </section>
   );
