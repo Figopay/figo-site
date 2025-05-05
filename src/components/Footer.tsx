@@ -51,13 +51,13 @@ export const Footer = () => {
 
         <div className="border-t border-figo-purple/10 mt-12 pt-8 text-center text-figo-purple/60 text-sm flex flex-col items-center">
           <div className="flex space-x-6 mb-4">
-            <a href="https://facebook.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+            <a href="https://www.facebook.com/profile.php?id=61573778506953" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
               <Facebook size={24} />
             </a>
-            <a href="https://instagram.com/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+            <a href="https://www.instagram.com/figo_pay" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
               <Instagram size={24} />
             </a>
-            <a href="https://linkedin.com/company/figo" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
+            <a href="https://www.linkedin.com/company/figooficial" target="_blank" rel="noopener noreferrer" className="text-figo-purple hover:text-figo-green transition-colors">
               <Linkedin size={24} />
             </a>
           </div>
