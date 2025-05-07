@@ -1,3 +1,4 @@
+
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -8,11 +9,18 @@ import {
 } from "./ui/carousel";
 import { Smartphone } from "lucide-react";
 import { useState, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const WHATSAPP_LINK = "https://wa.me/5511916629760";
 
 export const HeroSection = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  
+  // Initialize carousel with autoplay plugin
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 6000, stopOnInteraction: false })
+  ]);
   
   useEffect(() => {
     // Preload the first hero image
@@ -24,7 +32,16 @@ export const HeroSection = () => {
   return (
     <section id="home" className="pt-28 pb-20 md:pt-36 md:pb-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Carousel className="w-full">
+        <Carousel 
+          className="w-full"
+          ref={emblaRef}
+          opts={{ 
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({ delay: 6000, stopOnInteraction: false })
+          ]}
+        >
           <CarouselContent>
             {/* First slide - Original content */}
             <CarouselItem>
