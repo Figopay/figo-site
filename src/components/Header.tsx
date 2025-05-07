@@ -25,7 +25,7 @@ export const Header = () => {
             <div className="flex items-center">
               <a href="#home">
                 <img 
-                  src="/lovable-uploads/425a4488-2866-41f7-b642-dfe510a5e328.png" 
+                  src="/lovable-uploads/94c860ef-fac4-4ca2-89c9-28a8bec5b67a.png" 
                   alt="Figo Logo" 
                   className="h-10"
                 />
