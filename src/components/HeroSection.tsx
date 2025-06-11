@@ -13,6 +13,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const WHATSAPP_LINK = "https://wa.me/5511916629760";
+const FIGO_SHOP_LINK = "https://www.figoshop.com.br/";
 
 export const HeroSection = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -88,7 +89,7 @@ export const HeroSection = () => {
               </div>
             </CarouselItem>
 
-            {/* Second slide - Updated with new image */}
+            {/* Second slide - Updated with Figo Shop links */}
             <CarouselItem>
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
@@ -101,12 +102,12 @@ export const HeroSection = () => {
                       Revolucionamos o comércio físico unificando vendedores e compradores em uma única plataforma integrada, com todas as soluções necessárias para o seu negócio.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                      <a href={FIGO_SHOP_LINK} target="_blank" rel="noopener noreferrer">
                         <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
                           Saiba mais
                         </Button>
                       </a>
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                      <a href={FIGO_SHOP_LINK} target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
                           Como funciona
                         </Button>
