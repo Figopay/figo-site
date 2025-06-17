@@ -1,0 +1,204 @@
+
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { validateCNPJ, validateEmail } from "@/utils/contactFormValidation";
+import { formatCNPJ, formatPhone } from "@/utils/inputFormatters";
+
+interface FormData {
+  cnpj: string;
+  nome: string;
+  sobrenome: string;
+  celular: string;
+  email: string;
+  mensagem: string;
+  origem: string;
+}
+
+export const useContactForm = () => {
+  const [formData, setFormData] = useState<FormData>({
+    cnpj: "",
+    nome: "",
+    sobrenome: "",
+    celular: "",
+    email: "",
+    mensagem: "",
+    origem: "Site Figo Pay"
+  });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
+  const { toast } = useToast();
+
+  // Configure aqui a URL do seu webhook do Zapier
+  const ZAPIER_WEBHOOK_URL = ""; // Cole aqui a URL do seu webhook do Zapier
+
+  const handleInputChange = (field: string, value: string) => {
+    let formattedValue = value;
+    
+    if (field === 'cnpj') {
+      formattedValue = formatCNPJ(value);
+    } else if (field === 'celular') {
+      formattedValue = formatPhone(value);
+    }
+    
+    setFormData(prev => ({
+      ...prev,
+      [field]: formattedValue
+    }));
+  };
+
+  const validateForm = () => {
+    if (!formData.nome.trim()) {
+      toast({
+        title: "Erro",
+        description: "Nome é obrigatório",
+        variant: "destructive",
+      });
+      return false;
+    }
+    
+    if (!formData.sobrenome.trim()) {
+      toast({
+        title: "Erro",
+        description: "Sobrenome é obrigatório",
+        variant: "destructive",
+      });
+      return false;
+    }
+    
+    if (!formData.celular.trim()) {
+      toast({
+        title: "Erro",
+        description: "Celular é obrigatório",
+        variant: "destructive",
+      });
+      return false;
+    }
+    
+    if (!formData.email.trim()) {
+      toast({
+        title: "Erro",
+        description: "E-mail é obrigatório",
+        variant: "destructive",
+      });
+      return false;
+    }
+    
+    if (!validateEmail(formData.email)) {
+      toast({
+        title: "Erro",
+        description: "E-mail inválido",
+        variant: "destructive",
+      });
+      return false;
+    }
+    
+    if (formData.cnpj && !validateCNPJ(formData.cnpj)) {
+      toast({
+        title: "Erro",
+        description: "CNPJ inválido",
+        variant: "destructive",
+      });
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+    
+    try {
+      // Se tem webhook URL configurada, envia para Zapier
+      if (ZAPIER_WEBHOOK_URL.trim()) {
+        console.log("Enviando dados para Zapier:", formData);
+        
+        // Mapear os dados do formulário para os campos esperados pelo Zapier/Zoho CRM
+        const zapierData = {
+          // Campos do Lead
+          "Líder": `${formData.nome} ${formData.sobrenome}`,
+          "First Name": formData.nome,
+          "Last Name": formData.sobrenome,
+          "Email": formData.email,
+          "Phone": formData.celular,
+          "Company": formData.cnpj ? `CNPJ: ${formData.cnpj}` : "",
+          "Description": formData.mensagem,
+          "Lead Source": formData.origem,
+          
+          // Configurações do Convert Lead
+          "Notificar o proprietário do lead": true,
+          "Notificar o novo proprietário da entidade": true,
+          "ID da conta": "", // Será preenchido automaticamente pelo Zapier
+          "Sobrescrever": false,
+          "ID de contato": "", // Será preenchido automaticamente pelo Zapier
+          "Atribuir a": "", // Deixar vazio para usar o padrão
+          "Mover anexos para": "Contacts", // ou "Accounts" conforme sua preferência
+          
+          // Dados extras para rastreamento
+          timestamp: new Date().toISOString(),
+          triggered_from: window.location.origin,
+          form_origin: "Contact Form - Site Figo Pay"
+        };
+        
+        const response = await fetch(ZAPIER_WEBHOOK_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+          body: JSON.stringify(zapierData),
+        });
+
+        toast({
+          title: "Sucesso",
+          description: "Formulário enviado com sucesso! Em breve entraremos em contato.",
+        });
+      } else {
+        // Fallback para console log quando não há webhook configurado
+        console.log("Dados do formulário:", formData);
+        
+        toast({
+          title: "Formulário enviado",
+          description: "Recebemos seu contato! Em breve entraremos em contato.",
+        });
+      }
+      
+      setShowThankYou(true);
+    } catch (error) {
+      console.error("Erro ao enviar:", error);
+      toast({
+        title: "Erro",
+        description: "Erro ao enviar dados. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const resetForm = () => {
+    setFormData({
+      cnpj: "",
+      nome: "",
+      sobrenome: "",
+      celular: "",
+      email: "",
+      mensagem: "",
+      origem: "Site Figo Pay"
+    });
+    setShowThankYou(false);
+  };
+
+  return {
+    formData,
+    isSubmitting,
+    showThankYou,
+    handleInputChange,
+    handleSubmit,
+    resetForm
+  };
+};
