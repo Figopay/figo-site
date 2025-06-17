@@ -167,17 +167,40 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
       if (ZAPIER_WEBHOOK_URL.trim()) {
         console.log("Enviando dados para Zapier:", formData);
         
+        // Mapear os dados do formulário para os campos esperados pelo Zapier/Zoho CRM
+        const zapierData = {
+          // Campos do Lead
+          "Líder": `${formData.nome} ${formData.sobrenome}`,
+          "First Name": formData.nome,
+          "Last Name": formData.sobrenome,
+          "Email": formData.email,
+          "Phone": formData.celular,
+          "Company": formData.cnpj ? `CNPJ: ${formData.cnpj}` : "",
+          "Description": formData.mensagem,
+          "Lead Source": formData.origem,
+          
+          // Configurações do Convert Lead
+          "Notificar o proprietário do lead": true,
+          "Notificar o novo proprietário da entidade": true,
+          "ID da conta": "", // Será preenchido automaticamente pelo Zapier
+          "Sobrescrever": false,
+          "ID de contato": "", // Será preenchido automaticamente pelo Zapier
+          "Atribuir a": "", // Deixar vazio para usar o padrão
+          "Mover anexos para": "Contacts", // ou "Accounts" conforme sua preferência
+          
+          // Dados extras para rastreamento
+          timestamp: new Date().toISOString(),
+          triggered_from: window.location.origin,
+          form_origin: "Contact Form - Site Figo Pay"
+        };
+        
         const response = await fetch(ZAPIER_WEBHOOK_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           mode: "no-cors",
-          body: JSON.stringify({
-            ...formData,
-            timestamp: new Date().toISOString(),
-            triggered_from: window.location.origin,
-          }),
+          body: JSON.stringify(zapierData),
         });
 
         toast({
