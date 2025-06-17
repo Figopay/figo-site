@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { validateCNPJ, validateEmail } from "@/utils/contactFormValidation";
@@ -29,8 +28,8 @@ export const useContactForm = () => {
   const [showThankYou, setShowThankYou] = useState(false);
   const { toast } = useToast();
 
-  // Configure aqui a URL do seu webhook do Zapier
-  const ZAPIER_WEBHOOK_URL = ""; // Cole aqui a URL do seu webhook do Zapier
+  // URL do webhook do Zapier configurada
+  const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/23417097/uotxxgi/";
 
   const handleInputChange = (field: string, value: string) => {
     let formattedValue = value;
@@ -113,59 +112,47 @@ export const useContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Se tem webhook URL configurada, envia para Zapier
-      if (ZAPIER_WEBHOOK_URL.trim()) {
-        console.log("Enviando dados para Zapier:", formData);
+      console.log("Enviando dados para Zapier:", formData);
+      
+      // Mapear os dados do formulário para os campos esperados pelo Zapier/Zoho CRM Convert Lead
+      const zapierData = {
+        // Campos do Lead
+        "Company": formData.cnpj ? `CNPJ: ${formData.cnpj}` : `${formData.nome} ${formData.sobrenome}`,
+        "First Name": formData.nome,
+        "Last Name": formData.sobrenome,
+        "Email": formData.email,
+        "Phone": formData.celular,
+        "Description": formData.mensagem,
+        "Lead Source": formData.origem,
         
-        // Mapear os dados do formulário para os campos esperados pelo Zapier/Zoho CRM
-        const zapierData = {
-          // Campos do Lead
-          "Líder": `${formData.nome} ${formData.sobrenome}`,
-          "First Name": formData.nome,
-          "Last Name": formData.sobrenome,
-          "Email": formData.email,
-          "Phone": formData.celular,
-          "Company": formData.cnpj ? `CNPJ: ${formData.cnpj}` : "",
-          "Description": formData.mensagem,
-          "Lead Source": formData.origem,
-          
-          // Configurações do Convert Lead
-          "Notificar o proprietário do lead": true,
-          "Notificar o novo proprietário da entidade": true,
-          "ID da conta": "", // Será preenchido automaticamente pelo Zapier
-          "Sobrescrever": false,
-          "ID de contato": "", // Será preenchido automaticamente pelo Zapier
-          "Atribuir a": "", // Deixar vazio para usar o padrão
-          "Mover anexos para": "Contacts", // ou "Accounts" conforme sua preferência
-          
-          // Dados extras para rastreamento
-          timestamp: new Date().toISOString(),
-          triggered_from: window.location.origin,
-          form_origin: "Contact Form - Site Figo Pay"
-        };
+        // Configurações do Convert Lead
+        "Notify Lead Owner": true,
+        "Notify New Entity Owner": true,
+        "Account ID": "", // Será preenchido automaticamente pelo Zapier
+        "Overwrite": false,
+        "Contact ID": "", // Será preenchido automaticamente pelo Zapier
+        "Assign To": "", // Deixar vazio para usar o padrão
+        "Move Attachments To": "Contacts", // ou "Accounts" conforme sua preferência
         
-        const response = await fetch(ZAPIER_WEBHOOK_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          mode: "no-cors",
-          body: JSON.stringify(zapierData),
-        });
+        // Dados extras para rastreamento
+        timestamp: new Date().toISOString(),
+        triggered_from: window.location.origin,
+        form_origin: "Contact Form - Site Figo Pay"
+      };
+      
+      const response = await fetch(ZAPIER_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify(zapierData),
+      });
 
-        toast({
-          title: "Sucesso",
-          description: "Formulário enviado com sucesso! Em breve entraremos em contato.",
-        });
-      } else {
-        // Fallback para console log quando não há webhook configurado
-        console.log("Dados do formulário:", formData);
-        
-        toast({
-          title: "Formulário enviado",
-          description: "Recebemos seu contato! Em breve entraremos em contato.",
-        });
-      }
+      toast({
+        title: "Sucesso",
+        description: "Formulário enviado com sucesso! Em breve entraremos em contato.",
+      });
       
       setShowThankYou(true);
     } catch (error) {
