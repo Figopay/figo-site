@@ -142,7 +142,7 @@ export const useContactForm = () => {
         "First Name": formData.nome,
         "Last Name": formData.sobrenome,
         "Email": formData.email,
-        "Phone": formData.celular,
+        "Phone": `+55${formData.celular.replace(/\D/g, '')}`, // Adiciona +55 e remove formatação
         "Description": formData.mensagem,
         "Lead Source": formData.origem,
         
