@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -23,6 +22,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     origem: "Site Figo Pay"
   });
   
+  const [webhookUrl, setWebhookUrl] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
   const { toast } = useToast();
@@ -161,17 +161,43 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     setIsSubmitting(true);
     
     try {
-      // Aqui será integrado o webhook posteriormente
-      console.log("Dados do formulário:", formData);
-      
-      // Simular envio
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Se tem webhook URL, envia para Zapier
+      if (webhookUrl.trim()) {
+        console.log("Enviando dados para Zapier:", formData);
+        
+        const response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+          body: JSON.stringify({
+            ...formData,
+            timestamp: new Date().toISOString(),
+            triggered_from: window.location.origin,
+          }),
+        });
+
+        toast({
+          title: "Sucesso",
+          description: "Dados enviados para o Zapier! Verifique o histórico do seu Zap para confirmar.",
+        });
+      } else {
+        // Fallback para console log
+        console.log("Dados do formulário:", formData);
+        
+        toast({
+          title: "Formulário enviado",
+          description: "Configure um webhook do Zapier para integrar com o Zoho CRM.",
+        });
+      }
       
       setShowThankYou(true);
     } catch (error) {
+      console.error("Erro ao enviar:", error);
       toast({
         title: "Erro",
-        description: "Erro ao enviar formulário. Tente novamente.",
+        description: "Erro ao enviar dados. Tente novamente.",
         variant: "destructive",
       });
     } finally {
@@ -189,6 +215,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
       mensagem: "",
       origem: "Site Figo Pay"
     });
+    setWebhookUrl("");
     setShowThankYou(false);
     onClose();
   };
@@ -223,6 +250,23 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              <Label htmlFor="webhook" className="text-blue-800 font-medium">
+                Webhook do Zapier (opcional)
+              </Label>
+              <Input
+                id="webhook"
+                type="url"
+                placeholder="https://hooks.zapier.com/hooks/catch/..."
+                value={webhookUrl}
+                onChange={(e) => setWebhookUrl(e.target.value)}
+                className="mt-2"
+              />
+              <p className="text-sm text-blue-600 mt-1">
+                Cole aqui a URL do webhook do seu Zap para integrar com o Zoho CRM
+              </p>
+            </div>
+
             <div>
               <Label htmlFor="cnpj">CNPJ</Label>
               <Input
