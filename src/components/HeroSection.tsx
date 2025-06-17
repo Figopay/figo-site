@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -11,12 +10,14 @@ import { Smartphone } from "lucide-react";
 import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { ContactForm } from "./ContactForm";
 
 const WHATSAPP_LINK = "https://wa.me/5511916629760";
 const FIGO_SHOP_LINK = "https://www.figoshop.com.br/";
 
 export const HeroSection = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   
   // Initialize carousel with autoplay plugin
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -58,16 +59,19 @@ export const HeroSection = () => {
                       A Figo é a única plataforma multiadquirente que unifica todos os pagamentos e serviços financeiros em um só lugar.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                        <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                          Conhecer soluções
-                        </Button>
-                      </a>
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
-                          Fale com um especialista
-                        </Button>
-                      </a>
+                      <Button 
+                        onClick={() => setIsFormOpen(true)}
+                        className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium"
+                      >
+                        Conhecer soluções
+                      </Button>
+                      <Button 
+                        onClick={() => setIsFormOpen(true)}
+                        variant="outline" 
+                        className="border-figo-purple text-figo-purple hover:bg-figo-purple/10"
+                      >
+                        Fale com um especialista
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -144,16 +148,19 @@ export const HeroSection = () => {
                       Aceite pagamentos por aproximação direto no celular. Sem equipamentos, sem complicações.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                        <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                          Começar agora
-                        </Button>
-                      </a>
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
-                          Ver demonstração
-                        </Button>
-                      </a>
+                      <Button 
+                        onClick={() => setIsFormOpen(true)}
+                        className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium"
+                      >
+                        Começar agora
+                      </Button>
+                      <Button 
+                        onClick={() => setIsFormOpen(true)}
+                        variant="outline" 
+                        className="border-figo-purple text-figo-purple hover:bg-figo-purple/10"
+                      >
+                        Ver demonstração
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -176,6 +183,8 @@ export const HeroSection = () => {
           </div>
         </Carousel>
       </div>
+
+      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </section>
   );
 };
