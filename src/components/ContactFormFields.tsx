@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
@@ -31,13 +30,14 @@ export const ContactFormFields = ({
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <div>
-        <Label htmlFor="empresa">Empresa</Label>
+        <Label htmlFor="empresa">Empresa *</Label>
         <Input
           id="empresa"
           type="text"
           placeholder="Nome da empresa"
           value={formData.empresa}
           onChange={(e) => onInputChange('empresa', e.target.value)}
+          required
         />
       </div>
 
@@ -104,13 +104,14 @@ export const ContactFormFields = ({
       </div>
 
       <div>
-        <Label htmlFor="mensagem">Mensagem</Label>
+        <Label htmlFor="mensagem">Mensagem *</Label>
         <Textarea
           id="mensagem"
           placeholder="Conte-nos mais sobre suas necessidades..."
           value={formData.mensagem}
           onChange={(e) => onInputChange('mensagem', e.target.value)}
           rows={4}
+          required
         />
       </div>
 

@@ -50,6 +50,15 @@ export const useContactForm = () => {
   };
 
   const validateForm = () => {
+    if (!formData.empresa.trim()) {
+      toast({
+        title: "Erro",
+        description: "Empresa é obrigatório",
+        variant: "destructive",
+      });
+      return false;
+    }
+    
     if (!formData.nome.trim()) {
       toast({
         title: "Erro",
@@ -81,6 +90,15 @@ export const useContactForm = () => {
       toast({
         title: "Erro",
         description: "E-mail é obrigatório",
+        variant: "destructive",
+      });
+      return false;
+    }
+    
+    if (!formData.mensagem.trim()) {
+      toast({
+        title: "Erro",
+        description: "Mensagem é obrigatória",
         variant: "destructive",
       });
       return false;
