@@ -30,7 +30,7 @@ export const useContactForm = () => {
   const [showThankYou, setShowThankYou] = useState(false);
   const { toast } = useToast();
 
-  // URL do webhook do Zapier configurada
+  // URL do webhook do Zapier atualizada
   const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/23417097/uoh6u00/";
 
   const handleInputChange = (field: string, value: string) => {
@@ -133,32 +133,27 @@ export const useContactForm = () => {
     
     try {
       console.log("Enviando dados para Zapier:", formData);
+      console.log("URL do Zapier:", ZAPIER_WEBHOOK_URL);
       
-      // Mapear os dados do formulário para os campos esperados pelo Zapier/Zoho CRM Convert Lead
+      // Dados formatados para o Zapier
       const zapierData = {
-        // Campos do Lead
-        "Company": formData.empresa || (formData.cnpj ? `CNPJ: ${formData.cnpj}` : `${formData.nome} ${formData.sobrenome}`),
-        "First Name": formData.nome,
-        "Last Name": formData.sobrenome,
-        "Email": formData.email,
-        "Phone": `+55${formData.celular.replace(/\D/g, '')}`, // Adiciona +55 e remove formatação
-        "Description": formData.mensagem,
-        "Lead Source": formData.origem,
+        // Campos principais
+        empresa: formData.empresa,
+        cnpj: formData.cnpj,
+        nome: formData.nome,
+        sobrenome: formData.sobrenome,
+        celular: `+55${formData.celular.replace(/\D/g, '')}`, // Adiciona +55 e remove formatação
+        email: formData.email,
+        mensagem: formData.mensagem,
+        origem: formData.origem,
         
-        // Configurações do Convert Lead
-        "Notify Lead Owner": true,
-        "Notify New Entity Owner": true,
-        "Account ID": "", // Será preenchido automaticamente pelo Zapier
-        "Overwrite": false,
-        "Contact ID": "", // Será preenchido automaticamente pelo Zapier
-        "Assign To": "", // Deixar vazio para usar o padrão
-        "Move Attachments To": "Contacts", // ou "Accounts" conforme sua preferência
-        
-        // Dados extras para rastreamento
+        // Dados extras para controle
         timestamp: new Date().toISOString(),
         triggered_from: window.location.origin,
-        form_origin: "Contact Form - Site Figo Pay"
+        form_version: "2.0"
       };
+      
+      console.log("Dados enviados:", zapierData);
       
       const response = await fetch(ZAPIER_WEBHOOK_URL, {
         method: "POST",
@@ -169,6 +164,8 @@ export const useContactForm = () => {
         body: JSON.stringify(zapierData),
       });
 
+      console.log("Resposta do Zapier enviada");
+      
       toast({
         title: "Sucesso",
         description: "Formulário enviado com sucesso! Em breve entraremos em contato.",
@@ -176,7 +173,7 @@ export const useContactForm = () => {
       
       setShowThankYou(true);
     } catch (error) {
-      console.error("Erro ao enviar:", error);
+      console.error("Erro ao enviar para Zapier:", error);
       toast({
         title: "Erro",
         description: "Erro ao enviar dados. Tente novamente.",
