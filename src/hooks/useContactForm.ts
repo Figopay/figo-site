@@ -31,7 +31,7 @@ export const useContactForm = () => {
   const { toast } = useToast();
 
   // URL do webhook do Zapier configurada
-  const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/23417097/uotxxgi/";
+  const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/23417097/uoh6u00/";
 
   const handleInputChange = (field: string, value: string) => {
     let formattedValue = value;
