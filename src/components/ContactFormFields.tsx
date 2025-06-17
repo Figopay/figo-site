@@ -5,6 +5,7 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 
 interface FormData {
+  empresa: string;
   cnpj: string;
   nome: string;
   sobrenome: string;
@@ -29,6 +30,17 @@ export const ContactFormFields = ({
 }: ContactFormFieldsProps) => {
   return (
     <form onSubmit={onSubmit} className="space-y-4">
+      <div>
+        <Label htmlFor="empresa">Empresa</Label>
+        <Input
+          id="empresa"
+          type="text"
+          placeholder="Nome da empresa"
+          value={formData.empresa}
+          onChange={(e) => onInputChange('empresa', e.target.value)}
+        />
+      </div>
+
       <div>
         <Label htmlFor="cnpj">CNPJ</Label>
         <Input

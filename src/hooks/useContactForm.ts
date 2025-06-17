@@ -1,9 +1,11 @@
+
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { validateCNPJ, validateEmail } from "@/utils/contactFormValidation";
 import { formatCNPJ, formatPhone } from "@/utils/inputFormatters";
 
 interface FormData {
+  empresa: string;
   cnpj: string;
   nome: string;
   sobrenome: string;
@@ -15,6 +17,7 @@ interface FormData {
 
 export const useContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
+    empresa: "",
     cnpj: "",
     nome: "",
     sobrenome: "",
@@ -117,7 +120,7 @@ export const useContactForm = () => {
       // Mapear os dados do formulário para os campos esperados pelo Zapier/Zoho CRM Convert Lead
       const zapierData = {
         // Campos do Lead
-        "Company": formData.cnpj ? `CNPJ: ${formData.cnpj}` : `${formData.nome} ${formData.sobrenome}`,
+        "Company": formData.empresa || (formData.cnpj ? `CNPJ: ${formData.cnpj}` : `${formData.nome} ${formData.sobrenome}`),
         "First Name": formData.nome,
         "Last Name": formData.sobrenome,
         "Email": formData.email,
@@ -169,6 +172,7 @@ export const useContactForm = () => {
 
   const resetForm = () => {
     setFormData({
+      empresa: "",
       cnpj: "",
       nome: "",
       sobrenome: "",
