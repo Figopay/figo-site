@@ -1,5 +1,5 @@
 
-import { Code, PenTool, ArrowRight, Building } from "lucide-react";
+import { Code, PenTool, Building } from "lucide-react";
 import { Button } from "./ui/button";
 
 const WHATSAPP_LINK = "https://wa.me/5511916629760";
@@ -17,21 +17,15 @@ export const PartnersSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="bg-figo-purple-light/10 backdrop-blur-sm rounded-lg p-8 border border-white/10 hover:bg-white/10 transition-colors duration-300">
             <div className="bg-white/10 p-4 rounded-lg inline-block mb-6">
               <Code className="h-8 w-8 text-figo-green" />
             </div>
             <h3 className="font-bold text-xl mb-4">Integração via API</h3>
-            <p className="text-white/80 mb-6">
+            <p className="text-white/80">
               Nossas APIs RESTful e SDKs facilitam a integração com qualquer plataforma ou sistema existente. Documentação clara e suporte técnico especializado.
             </p>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                Documentação da API
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
           </div>
 
           <div className="bg-figo-purple-light/10 backdrop-blur-sm rounded-lg p-8 border border-white/10 hover:bg-white/10 transition-colors duration-300">
@@ -39,15 +33,9 @@ export const PartnersSection = () => {
               <PenTool className="h-8 w-8 text-figo-green" />
             </div>
             <h3 className="font-bold text-xl mb-4">Personalização Total</h3>
-            <p className="text-white/80 mb-6">
+            <p className="text-white/80">
               Personalize completamente nossa solução com sua marca. Ofereça uma experiência única para seus clientes mantendo total controle sobre a identidade visual.
             </p>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                Saiba mais
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
           </div>
 
           <div className="bg-figo-purple-light/10 backdrop-blur-sm rounded-lg p-8 border border-white/10 hover:bg-white/10 transition-colors duration-300">
@@ -55,16 +43,18 @@ export const PartnersSection = () => {
               <Building className="h-8 w-8 text-figo-green" />
             </div>
             <h3 className="font-bold text-xl mb-4">Geração de valor</h3>
-            <p className="text-white/80 mb-6">
+            <p className="text-white/80">
               Seja o agente de transformação do varejo, levando inovação, tecnologia e eficiência para seus clientes com a Figo. Uma oportunidade de fortalecer relacionamentos e ampliar sua atuação com uma solução completa e moderna.
             </p>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                Seja um parceiro
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
           </div>
+        </div>
+
+        <div className="text-center">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+            <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium text-lg px-8 py-3">
+              Seja um parceiro
+            </Button>
+          </a>
         </div>
       </div>
     </section>
