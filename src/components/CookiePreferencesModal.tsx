@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
-import { Checkbox } from "./ui/checkbox";
+import { Switch } from "./ui/switch";
 import { Button } from "./ui/button";
 import { CookiePreferences } from "@/hooks/useCookieConsent";
 
@@ -24,10 +24,9 @@ export const CookiePreferencesModal = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-figo-purple">Preferências de Cookies</DialogTitle>
+          <DialogTitle className="text-figo-purple">Gerenciar Preferências de Cookies</DialogTitle>
           <DialogDescription>
-            Personalize suas preferências de cookies. Os cookies necessários são obrigatórios 
-            para o funcionamento básico do site.
+            Escolha quais tipos de cookies você deseja aceitar. Cookies necessários não podem ser desabilitados.
           </DialogDescription>
         </DialogHeader>
         
@@ -38,13 +37,13 @@ export const CookiePreferencesModal = ({
               <div>
                 <h4 className="font-medium text-figo-purple">Cookies Necessários</h4>
                 <p className="text-sm text-figo-purple/70">
-                  Essenciais para o funcionamento básico do site
+                  Essenciais para o funcionamento básico do site. Sempre ativos.
                 </p>
               </div>
-              <Checkbox 
+              <Switch 
                 checked={preferences.necessary} 
                 disabled={true}
-                className="data-[state=checked]:bg-figo-green data-[state=checked]:border-figo-green"
+                className="data-[state=checked]:bg-figo-green"
               />
             </div>
           </div>
@@ -53,15 +52,15 @@ export const CookiePreferencesModal = ({
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <div>
-                <h4 className="font-medium text-figo-purple">Cookies de Análise</h4>
+                <h4 className="font-medium text-figo-purple">Cookies de Analytics</h4>
                 <p className="text-sm text-figo-purple/70">
-                  Nos ajudam a entender como você usa o site
+                  Nos ajudam a entender como você usa nosso site para melhorarmos a experiência.
                 </p>
               </div>
-              <Checkbox 
+              <Switch 
                 checked={preferences.analytics}
-                onCheckedChange={(checked) => onUpdatePreference('analytics', checked as boolean)}
-                className="data-[state=checked]:bg-figo-green data-[state=checked]:border-figo-green"
+                onCheckedChange={(checked) => onUpdatePreference('analytics', checked)}
+                className="data-[state=checked]:bg-figo-green"
               />
             </div>
           </div>
@@ -72,13 +71,13 @@ export const CookiePreferencesModal = ({
               <div>
                 <h4 className="font-medium text-figo-purple">Cookies de Marketing</h4>
                 <p className="text-sm text-figo-purple/70">
-                  Personalizam anúncios e conteúdo para você
+                  Utilizados para personalizar anúncios e medir a eficácia de campanhas.
                 </p>
               </div>
-              <Checkbox 
+              <Switch 
                 checked={preferences.marketing}
-                onCheckedChange={(checked) => onUpdatePreference('marketing', checked as boolean)}
-                className="data-[state=checked]:bg-figo-green data-[state=checked]:border-figo-green"
+                onCheckedChange={(checked) => onUpdatePreference('marketing', checked)}
+                className="data-[state=checked]:bg-figo-green"
               />
             </div>
           </div>
@@ -89,13 +88,13 @@ export const CookiePreferencesModal = ({
               <div>
                 <h4 className="font-medium text-figo-purple">Cookies Funcionais</h4>
                 <p className="text-sm text-figo-purple/70">
-                  Melhoram a funcionalidade e personalização
+                  Permitem funcionalidades aprimoradas como chat ao vivo e personalização.
                 </p>
               </div>
-              <Checkbox 
+              <Switch 
                 checked={preferences.functional}
-                onCheckedChange={(checked) => onUpdatePreference('functional', checked as boolean)}
-                className="data-[state=checked]:bg-figo-green data-[state=checked]:border-figo-green"
+                onCheckedChange={(checked) => onUpdatePreference('functional', checked)}
+                className="data-[state=checked]:bg-figo-green"
               />
             </div>
           </div>
