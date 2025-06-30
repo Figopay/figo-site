@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
@@ -74,10 +73,7 @@ export const CookieBanner = () => {
               <Cookie className="h-6 w-6 text-figo-green mt-1 flex-shrink-0" />
               <div className="text-sm text-figo-purple/80 leading-relaxed">
                 <p>
-                  Este site utiliza cookies para melhorar sua experiência de navegação, 
-                  analisar o tráfego e personalizar conteúdo e anúncios. Ao continuar 
-                  navegando, você concorda com o uso de cookies, conforme nossa Política 
-                  de Privacidade. Você pode gerenciar suas preferências a qualquer momento.
+                  Este site usa cookies para oferecer uma experiência melhor. Ao navegar, você aceita nossa Política de Privacidade.
                 </p>
               </div>
             </div>
