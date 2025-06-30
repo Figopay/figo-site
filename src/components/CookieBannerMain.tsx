@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { Cookie, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface CookieBannerMainProps {
   onAcceptAll: () => void;
@@ -17,7 +18,14 @@ export const CookieBannerMain = ({ onAcceptAll, onManagePreferences }: CookieBan
             <Cookie className="h-6 w-6 text-figo-green mt-1 flex-shrink-0" />
             <div className="text-sm text-figo-purple/80 leading-relaxed">
               <p>
-                Este site usa cookies para oferecer uma experiência melhor. Ao navegar, você aceita nossa Política de Privacidade.
+                Este site usa cookies para oferecer uma experiência melhor. Ao navegar, você aceita nossa{" "}
+                <Link 
+                  to="/politica-de-privacidade" 
+                  className="text-figo-green hover:underline font-medium"
+                >
+                  Política de Privacidade
+                </Link>
+                .
               </p>
             </div>
           </div>
