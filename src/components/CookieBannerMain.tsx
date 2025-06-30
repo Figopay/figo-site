@@ -23,7 +23,7 @@ export const CookieBannerMain = ({ onAcceptAll, onManagePreferences }: CookieBan
             <Cookie className="h-6 w-6 text-figo-green mt-1 flex-shrink-0" />
             <div className="text-sm text-figo-purple/80 leading-relaxed">
               <p>
-                Este site usa cookies para oferecer uma experiência melhor. Ao navegar, você aceita nossa{" "}
+                Utilizamos cookies para melhorar sua experiência em nosso site, personalizar conteúdo e analisar nosso tráfego. Ao continuar navegando, você concorda com nossa{" "}
                 <Link 
                   to="/politica-de-privacidade" 
                   onClick={handlePrivacyPolicyClick}
