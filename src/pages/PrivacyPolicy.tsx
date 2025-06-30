@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24 max-w-4xl">
         <h1 className="text-3xl font-bold text-figo-purple mb-8">Política de Privacidade – Figo Pay</h1>
         
         <div className="prose prose-lg max-w-none text-figo-purple/80">
