@@ -1,8 +1,12 @@
-
 import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
+  const handlePrivacyPolicyClick = () => {
+    // Scroll to top when navigating to privacy policy
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-figo-purple-lighter border-t border-figo-purple/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -66,6 +70,7 @@ export const Footer = () => {
             <p>&copy; {new Date().getFullYear()} Figo. Todos os direitos reservados.</p>
             <Link 
               to="/politica-de-privacidade" 
+              onClick={handlePrivacyPolicyClick}
               className="text-figo-purple/40 hover:text-figo-purple/60 transition-colors text-xs"
             >
               Política de Privacidade
