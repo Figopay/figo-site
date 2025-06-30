@@ -1,5 +1,6 @@
 
 import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -61,7 +62,15 @@ export const Footer = () => {
               <Linkedin size={24} />
             </a>
           </div>
-          <p>&copy; {new Date().getFullYear()} Figo. Todos os direitos reservados.</p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <p>&copy; {new Date().getFullYear()} Figo. Todos os direitos reservados.</p>
+            <Link 
+              to="/politica-de-privacidade" 
+              className="text-figo-purple/40 hover:text-figo-purple/60 transition-colors text-xs"
+            >
+              Política de Privacidade
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
