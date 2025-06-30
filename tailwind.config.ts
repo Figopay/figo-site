@@ -63,7 +63,7 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         "figo-purple": {
-          DEFAULT: "#4A2A59",
+          DEFAULT: "#451b47",
           light: "#6B4A7A",
           lighter: "#F8F6FA"
         },
