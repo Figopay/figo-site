@@ -9,6 +9,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { InspiringCallSection } from "@/components/InspiringCallSection";
 import { Footer } from "@/components/Footer";
+import { CookieBanner } from "@/components/CookieBanner";
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
       <PartnersSection />
       <InspiringCallSection />
       <Footer />
+      <CookieBanner />
     </div>
   );
 };
