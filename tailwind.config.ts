@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -69,7 +68,7 @@ export default {
           lighter: "#F8F6FA"
         },
         "figo-green": {
-          DEFAULT: "#B8E986"
+          DEFAULT: "#cccc27"
         }
       },
       borderRadius: {
