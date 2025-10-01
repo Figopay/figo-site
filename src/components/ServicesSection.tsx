@@ -42,7 +42,7 @@ export const ServicesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-figo-purple mb-4">
-            Serviços <span className="text-figo-green">oferecidos</span>
+            Shopping de <span className="text-figo-green">serviços financeiros</span>
           </h2>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto">
             Além das soluções de pagamento, oferecemos uma gama completa de serviços financeiros para aumentar seu faturamento e melhorar a experiência de seus clientes.
