@@ -93,29 +93,32 @@ export const HeroSection = () => {
               </div>
             </CarouselItem>
 
-            {/* Second slide - Updated with Figo Shop links */}
+            {/* Second slide - Figo Pay Caixa Inteligente */}
             <CarouselItem>
               <div className="flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
                   <div className="max-w-lg">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-figo-purple mb-4 animate-fade-in-up">
-                      <span className="text-figo-green">Primeiro Marketplace</span> <br />
-                      do mundo físico
+                      Figo Pay - <span className="text-figo-green">O Caixa inteligente</span> <br />
+                      do seu negócio
                     </h1>
                     <p className="text-lg md:text-xl text-figo-purple/80 mb-8 animate-fade-in-up animate-delay-200">
-                      Revolucionamos o comércio físico unificando vendedores e compradores em uma única plataforma integrada, com todas as soluções necessárias para o seu negócio.
+                      Muito além de maquininha, a Figo Pay é o Caixa Inteligente que centraliza todos as formas de pagamento e garante seu fechamento de caixa!!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <a href={FIGO_SHOP_LINK} target="_blank" rel="noopener noreferrer">
-                        <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium">
-                          Saiba mais
-                        </Button>
-                      </a>
-                      <a href={FIGO_SHOP_LINK} target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline" className="border-figo-purple text-figo-purple hover:bg-figo-purple/10">
-                          Como funciona
-                        </Button>
-                      </a>
+                      <Button 
+                        onClick={() => setIsFormOpen(true)}
+                        className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium"
+                      >
+                        Conheça o Caixa inteligente
+                      </Button>
+                      <Button 
+                        onClick={() => setIsFormOpen(true)}
+                        variant="outline" 
+                        className="border-figo-purple text-figo-purple hover:bg-figo-purple/10"
+                      >
+                        Fale com um especialista
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -123,7 +126,7 @@ export const HeroSection = () => {
                   <div className="p-0 flex justify-center">
                     <img 
                       src="/lovable-uploads/40980156-6431-498f-80a3-348c713138d4.png"
-                      alt="Terminais de pagamento Figo com aplicativo aberto mostrando interface do marketplace físico"
+                      alt="Terminais de pagamento Figo com aplicativo aberto mostrando interface do Caixa Inteligente"
                       className="w-[130%] h-auto"
                       loading="lazy"
                     />
