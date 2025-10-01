@@ -57,27 +57,23 @@ export const ComparisonSection = () => {
                     </td>
                     <td className="py-5 px-6 text-center border-r border-gray-200">
                       {feature.traditional ? (
-                        <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full">
-                          <Check className="h-5 w-5" />
-                          <span className="font-semibold">Sim</span>
+                        <div className="inline-flex items-center justify-center bg-green-50 text-green-700 w-12 h-12 rounded-full mx-auto">
+                          <Check className="h-7 w-7" />
                         </div>
                       ) : (
-                        <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-2 rounded-full">
-                          <X className="h-5 w-5" />
-                          <span className="font-semibold">Não</span>
+                        <div className="inline-flex items-center justify-center bg-red-50 text-red-600 w-12 h-12 rounded-full mx-auto">
+                          <X className="h-7 w-7" />
                         </div>
                       )}
                     </td>
                     <td className="py-5 px-6 text-center">
                       {feature.figo ? (
-                        <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full">
-                          <Check className="h-5 w-5" />
-                          <span className="font-semibold">Sim</span>
+                        <div className="inline-flex items-center justify-center bg-green-50 text-green-700 w-12 h-12 rounded-full mx-auto">
+                          <Check className="h-7 w-7" />
                         </div>
                       ) : (
-                        <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-4 py-2 rounded-full">
-                          <X className="h-5 w-5" />
-                          <span className="font-semibold">Não</span>
+                        <div className="inline-flex items-center justify-center bg-red-50 text-red-600 w-12 h-12 rounded-full mx-auto">
+                          <X className="h-7 w-7" />
                         </div>
                       )}
                     </td>
