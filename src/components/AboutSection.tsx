@@ -28,14 +28,16 @@ export const AboutSection = () => {
             Sobre a <span className="text-figo-green">Figo</span>
           </h2>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto">
-            A Figo Pay nasceu para ser o Caixa Inteligente do varejo brasileiro. Somos uma plataforma multicanal que centraliza cartões, PIX, links de pagamento e até dinheiro em um único fluxo, garantindo segurança no fechamento de caixa e controle em tempo real de todos os recebíveis.
+            A Figo Pay nasceu para ser o <strong>Caixa Inteligente</strong> do varejo brasileiro. Somos uma <strong>plataforma multicanal</strong> que centraliza cartões, PIX, links de pagamento e até dinheiro em um único fluxo, garantindo <strong>segurança no fechamento de caixa</strong> e <strong>controle em tempo real</strong> de todos os recebíveis.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            A Figo não muda a sua rotina financeira, o varejista mantém seus contratos de adquirentes vigentes e continua operando como já está acostumado. Nosso papel é fazer você economizar com a gestão inteligente das taxas e reunir todas as informações em um único lugar, simples e transparente. Cada transação é roteada automaticamente para a melhor condição de taxa, gerando economia imediata.
+            A Figo <strong>não muda a sua rotina financeira</strong>, o varejista mantém seus contratos de adquirentes vigentes e continua operando como já está acostumado. Nosso papel é fazer você economizar com a <strong>gestão inteligente das taxas</strong> e reunir todas as informações em um <strong>único lugar</strong>, simples e transparente. Cada transação é roteada automaticamente para a <strong>melhor condição de taxa</strong>, gerando <strong>economia imediata</strong>.
           </p>
-          <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            Mais do que tecnologia, somos parceiros do varejista que busca segurança, eficiência e crescimento sustentável no seu negócio.
-          </p>
+          <div className="bg-figo-green/20 rounded-2xl p-6 max-w-3xl mx-auto mt-6">
+            <p className="text-xl font-semibold text-figo-purple">
+              Mais do que tecnologia, somos <strong>parceiros do varejista</strong> que busca segurança, eficiência e crescimento sustentável no seu negócio.
+            </p>
+          </div>
         </div>
 
         <div className="relative bg-figo-green/30 py-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
