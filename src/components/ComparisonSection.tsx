@@ -52,10 +52,10 @@ export const ComparisonSection = () => {
                       index % 2 === 0 ? "bg-gray-50" : "bg-white"
                     } hover:bg-figo-green/5 transition-colors duration-200`}
                   >
-                    <td className="py-5 px-6 text-figo-purple font-medium border-r border-gray-200">
+                    <td className="py-3 px-6 text-figo-purple font-medium border-r border-gray-200">
                       {feature.name}
                     </td>
-                    <td className="py-5 px-6 text-center border-r border-gray-200">
+                    <td className="py-3 px-6 text-center border-r border-gray-200">
                       {feature.traditional ? (
                         <div className="inline-flex items-center justify-center bg-green-50 text-green-700 w-12 h-12 rounded-full mx-auto">
                           <Check className="h-7 w-7" />
@@ -66,7 +66,7 @@ export const ComparisonSection = () => {
                         </div>
                       )}
                     </td>
-                    <td className="py-5 px-6 text-center">
+                    <td className="py-3 px-6 text-center">
                       {feature.figo ? (
                         <div className="inline-flex items-center justify-center bg-green-50 text-green-700 w-12 h-12 rounded-full mx-auto">
                           <Check className="h-7 w-7" />
