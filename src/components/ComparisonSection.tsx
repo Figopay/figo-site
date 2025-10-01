@@ -33,7 +33,7 @@ export const ComparisonSection = () => {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gradient-to-r from-figo-purple to-figo-purple/90">
-                  <th className="py-6 px-6 text-left text-white font-bold text-lg border-r border-white/20">
+                  <th className="py-6 px-6 text-center text-white font-bold text-lg border-r border-white/20">
                     Recurso
                   </th>
                   <th className="py-6 px-6 text-center text-white font-bold text-lg border-r border-white/20">
