@@ -31,7 +31,7 @@ export const AboutSection = () => {
             A Figo Pay nasceu para ser o <strong>Caixa Inteligente</strong> do varejo brasileiro. Somos uma <strong>plataforma multicanal</strong> que centraliza cartões, PIX, links de pagamento e até dinheiro em um único fluxo, garantindo <strong>segurança no fechamento de caixa</strong> e controle em tempo real de todos os recebíveis.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            Com nossa <strong>multiadquirência inteligente</strong>, cada transação é roteada automaticamente para a melhor condição de custo, gerando <strong>economia imediata</strong> e mais margem para o lojista. Além disso, oferecemos soluções nativas de fidelização com <strong>cashback automático</strong> e recursos operacionais que conectam vendas presenciais e remotas, simplificando a rotina e fortalecendo o relacionamento com os clientes.
+            Com nossa <strong>multiadquirência inteligente</strong>, cada transação é roteada automaticamente para a melhor condição de taxa, gerando <strong>economia imediata</strong> e mais margem para o lojista. Além disso, oferecemos soluções nativas de fidelização com <strong>cashback automático</strong> e recursos operacionais que conectam vendas presenciais e remotas, simplificando a rotina e fortalecendo o relacionamento com os clientes.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
             Mais do que tecnologia, somos <strong>parceiros do varejista</strong> que busca segurança, eficiência e crescimento sustentável no seu negócio.

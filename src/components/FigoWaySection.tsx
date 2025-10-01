@@ -15,7 +15,7 @@ export const FigoWaySection = () => {
     {
       icon: Zap,
       title: "Multiadquirência inteligente",
-      description: "Cada transação é roteada automaticamente para a melhor condição de custo, gerando economia real a cada venda."
+      description: "Cada transação é roteada automaticamente para a melhor condição de taxa, gerando economia real a cada venda."
     },
     {
       icon: Shield,
