@@ -21,7 +21,7 @@ export const HeroSection = () => {
   
   // Initialize carousel with autoplay plugin
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 6000, stopOnInteraction: false })
+    Autoplay({ delay: 8000, stopOnInteraction: false })
   ]);
   
   useEffect(() => {
@@ -41,7 +41,7 @@ export const HeroSection = () => {
             loop: true,
           }}
           plugins={[
-            Autoplay({ delay: 6000, stopOnInteraction: false })
+            Autoplay({ delay: 8000, stopOnInteraction: false })
           ]}
         >
           <CarouselContent>
