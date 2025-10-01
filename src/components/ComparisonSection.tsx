@@ -8,7 +8,7 @@ export const ComparisonSection = () => {
     { name: "CashBack Integrado", traditional: false, figo: true },
     { name: "Controle total de diversas adquirentes", traditional: false, figo: true },
     { name: "Ordem de pedidos para motoboy / delivery", traditional: false, figo: true },
-    { name: "Multiadquirência", traditional: false, figo: true },
+    { name: "Multiadquirência (todas contratadas pelo lojista)", traditional: false, figo: true },
     { name: "Recarga de celular", traditional: false, figo: true },
     { name: "Link de pagamento", traditional: false, figo: true },
     { name: "Registro de pagamento dinheiro", traditional: false, figo: true },
