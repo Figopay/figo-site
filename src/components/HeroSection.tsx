@@ -191,7 +191,7 @@ export const HeroSection = () => {
                   <div className="flex flex-col items-center">
                     <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
                       <img 
-                        src="/lovable-uploads/94c860ef-fac4-4ca2-89c9-28a8bec5b67a.png"
+                        src="/lovable-uploads/desktop-notebook.png"
                         alt="Desktop e Link de Pagamento Figo"
                         className="h-full w-auto object-contain"
                       />
