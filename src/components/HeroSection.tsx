@@ -145,31 +145,31 @@ export const HeroSection = () => {
                 </div>
                 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl animate-fade-in animate-delay-400">
-                  {/* SmartPOS */}
-                  <div className="flex flex-col items-center">
-                    <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
-                      <img 
-                        src="/lovable-uploads/2268b6e1-4db9-4850-b09f-4a8b141e4dc1.png"
-                        alt="SmartPOS Figo"
-                        className="h-full w-auto object-contain"
-                      />
-                    </div>
-                    <div className="bg-figo-green rounded-full px-6 py-2">
-                      <span className="text-figo-purple font-semibold text-sm md:text-base">Smart POS</span>
-                    </div>
-                  </div>
-
                   {/* Tap On Phone */}
                   <div className="flex flex-col items-center">
                     <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
                       <img 
-                        src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
+                        src="/lovable-uploads/2268b6e1-4db9-4850-b09f-4a8b141e4dc1.png"
                         alt="Tap On Phone Figo"
                         className="h-full w-auto object-contain"
                       />
                     </div>
                     <div className="bg-figo-green rounded-full px-6 py-2">
                       <span className="text-figo-purple font-semibold text-sm md:text-base">Tap On Phone</span>
+                    </div>
+                  </div>
+
+                  {/* SmartPOS */}
+                  <div className="flex flex-col items-center">
+                    <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
+                      <img 
+                        src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
+                        alt="SmartPOS Figo"
+                        className="h-full w-auto object-contain"
+                      />
+                    </div>
+                    <div className="bg-figo-green rounded-full px-6 py-2">
+                      <span className="text-figo-purple font-semibold text-sm md:text-base">Smart POS</span>
                     </div>
                   </div>
 
