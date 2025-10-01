@@ -197,7 +197,7 @@ export const HeroSection = () => {
                       />
                     </div>
                     <div className="bg-figo-green rounded-full px-6 py-2 whitespace-nowrap">
-                      <span className="text-figo-purple font-semibold text-sm md:text-base">Desktop c/ Link de Pagamento</span>
+                      <span className="text-figo-purple font-semibold text-sm md:text-base">Desktop</span>
                     </div>
                   </div>
                 </div>
