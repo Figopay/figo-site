@@ -132,46 +132,90 @@ export const HeroSection = () => {
               </div>
             </CarouselItem>
 
-            {/* New third slide - Tap On Phone */}
+            {/* New third slide - Multiplataformas */}
             <CarouselItem>
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
-                  <div className="max-w-lg">
-                    <div className="inline-block bg-figo-green/10 p-3 rounded-full mb-4">
-                      <Smartphone className="h-7 w-7 text-figo-green" />
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-8">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-figo-purple mb-2 animate-fade-in-up">
+                    A Figo Pay é <span className="text-figo-green">Multiplataformas</span>
+                  </h1>
+                  <p className="text-base md:text-lg text-figo-purple/80 max-w-4xl mx-auto animate-fade-in-up animate-delay-200">
+                    A Figo Pay funciona onde o seu negócio estiver: SmartPOS, Pinpad, computador ou celular. Você escolhe o dispositivo ideal para o seu dia a dia e tem acesso às mesmas funcionalidades em qualquer ambiente, com praticidade, flexibilidade e controle total das vendas.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl animate-fade-in animate-delay-400">
+                  {/* SmartPOS */}
+                  <div className="flex flex-col items-center">
+                    <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
+                      <img 
+                        src="/lovable-uploads/2268b6e1-4db9-4850-b09f-4a8b141e4dc1.png"
+                        alt="SmartPOS Figo"
+                        className="h-full w-auto object-contain"
+                      />
                     </div>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-figo-purple mb-4 animate-fade-in-up">
-                      Transforme seu <span className="text-figo-green">celular</span> <br />
-                      em uma maquininha
-                    </h1>
-                    <p className="text-lg md:text-xl text-figo-purple/80 mb-8 animate-fade-in-up animate-delay-200">
-                      Aceite pagamentos por aproximação direto no celular. Sem equipamentos, sem complicações.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-                      <Button 
-                        onClick={() => setIsFormOpen(true)}
-                        className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium"
-                      >
-                        Começar agora
-                      </Button>
-                      <Button 
-                        onClick={() => setIsFormOpen(true)}
-                        variant="outline" 
-                        className="border-figo-purple text-figo-purple hover:bg-figo-purple/10"
-                      >
-                        Ver demonstração
-                      </Button>
+                    <div className="bg-figo-green rounded-full px-6 py-2">
+                      <span className="text-figo-purple font-semibold text-sm md:text-base">Smart POS</span>
+                    </div>
+                  </div>
+
+                  {/* Tap On Phone */}
+                  <div className="flex flex-col items-center">
+                    <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
+                      <img 
+                        src="/lovable-uploads/d5e3fd10-5e06-4f16-a72a-5886b8621e97.png"
+                        alt="Tap On Phone Figo"
+                        className="h-full w-auto object-contain"
+                      />
+                    </div>
+                    <div className="bg-figo-green rounded-full px-6 py-2">
+                      <span className="text-figo-purple font-semibold text-sm md:text-base">Tap On Phone</span>
+                    </div>
+                  </div>
+
+                  {/* PinPad */}
+                  <div className="flex flex-col items-center">
+                    <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
+                      <img 
+                        src="/lovable-uploads/425a4488-2866-41f7-b642-dfe510a5e328.png"
+                        alt="PinPad Figo"
+                        className="h-full w-auto object-contain"
+                      />
+                    </div>
+                    <div className="bg-figo-green rounded-full px-6 py-2">
+                      <span className="text-figo-purple font-semibold text-sm md:text-base">PinPad</span>
+                    </div>
+                  </div>
+
+                  {/* Desktop / Link de Pagamento */}
+                  <div className="flex flex-col items-center">
+                    <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
+                      <img 
+                        src="/lovable-uploads/94c860ef-fac4-4ca2-89c9-28a8bec5b67a.png"
+                        alt="Desktop e Link de Pagamento Figo"
+                        className="h-full w-auto object-contain"
+                      />
+                    </div>
+                    <div className="bg-figo-green rounded-full px-6 py-2 whitespace-nowrap">
+                      <span className="text-figo-purple font-semibold text-sm md:text-base">Desktop c/ Link de Pagamento</span>
                     </div>
                   </div>
                 </div>
-                <div className="w-full md:w-1/2 animate-fade-in animate-delay-400">
-                  <div className="p-0 flex justify-center">
-                    <img 
-                      src="/lovable-uploads/d4714528-53f2-463b-a05f-0a88b5c13773.png" 
-                      alt="Smartphones mostrando o aplicativo Figo com funcionalidades de pagamento e marketplace"
-                      className="w-[250%] h-auto object-contain" 
-                    />
-                  </div>
+
+                <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-500">
+                  <Button 
+                    onClick={() => setIsFormOpen(true)}
+                    className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium"
+                  >
+                    Conhecer soluções
+                  </Button>
+                  <Button 
+                    onClick={() => setIsFormOpen(true)}
+                    variant="outline" 
+                    className="border-figo-purple text-figo-purple hover:bg-figo-purple/10"
+                  >
+                    Fale com um especialista
+                  </Button>
                 </div>
               </div>
             </CarouselItem>
