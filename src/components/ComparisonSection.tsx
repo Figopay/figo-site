@@ -89,9 +89,7 @@ export const ComparisonSection = () => {
               12 recursos essenciais em uma única plataforma
             </p>
             <p className="text-figo-purple/70 text-lg">
-              Enquanto a maquininha tradicional oferece apenas 1 funcionalidade, 
-              a <span className="font-bold text-figo-green">Figo Pay</span> entrega a solução completa 
-              para o seu negócio crescer.
+              Diferente das maquininhas tradicionais a <span className="font-bold text-figo-green">Figo Pay</span> entrega a solução completa para o seu negócio crescer.
             </p>
           </div>
         </div>
