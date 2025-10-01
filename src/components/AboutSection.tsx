@@ -43,13 +43,13 @@ export const AboutSection = () => {
             Sobre a <span className="text-figo-green">Figo</span>
           </h2>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto">
-            Somos a única solução multiadquirente e multicanal que simplifica as transações do varejo com roteamento automático da melhor taxa para cada venda — garantindo mais economia e eficiência para o seu negócio. Também atuamos como um marketplace de serviços financeiros, oferecendo soluções que geram valor para o varejo e ampliam as possibilidades de receita.
+            A Figo Pay nasceu para ser o <strong>Caixa Inteligente</strong> do varejo brasileiro. Somos uma <strong>plataforma multicanal</strong> que centraliza cartões, PIX, links de pagamento e até dinheiro em um único fluxo, garantindo <strong>segurança no fechamento de caixa</strong> e controle em tempo real de todos os recebíveis.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            Com a Figo.Shop, levamos o conceito de marketplace para o mundo físico, conectando lojistas a uma prateleira infinita de produtos com gestão automatizada de repasses via split de pagamento.
+            Com nossa <strong>multiadquirência inteligente</strong>, cada transação é roteada automaticamente para a melhor condição de custo, gerando <strong>economia imediata</strong> e mais margem para o lojista. Além disso, oferecemos soluções nativas de fidelização com <strong>cashback automático</strong> e recursos operacionais que conectam vendas presenciais e remotas, simplificando a rotina e fortalecendo o relacionamento com os clientes.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            <strong>A Figo é uma plataforma completa que reúne todos os meios de pagamento, serviços financeiros e catálogo de produtos para venda em um só lugar.</strong>
+            Mais do que tecnologia, somos <strong>parceiros do varejista</strong> que busca segurança, eficiência e crescimento sustentável no seu negócio.
           </p>
         </div>
 
