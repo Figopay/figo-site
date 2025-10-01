@@ -177,7 +177,7 @@ export const HeroSection = () => {
                   <div className="flex flex-col items-center">
                     <div className="bg-white rounded-lg p-4 mb-4 shadow-lg flex items-center justify-center h-48 w-full">
                       <img 
-                        src="/lovable-uploads/425a4488-2866-41f7-b642-dfe510a5e328.png"
+                        src="/lovable-uploads/pinpad-device.png"
                         alt="PinPad Figo"
                         className="h-full w-auto object-contain"
                       />
