@@ -22,9 +22,8 @@ const Index = () => {
       <AboutSection />
       <FigoWaySection />
       <ComparisonSection />
-      
-      <TapOnPhoneSection />
       <ServicesSection />
+      <TapOnPhoneSection />
       <PartnersSection />
       <InspiringCallSection />
       <Footer />
