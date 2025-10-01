@@ -63,7 +63,7 @@ export const HeroSection = () => {
                         onClick={() => setIsFormOpen(true)}
                         className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium"
                       >
-                        Conhecer soluções
+                        Conheça o Caixa inteligente
                       </Button>
                       <Button 
                         onClick={() => setIsFormOpen(true)}
@@ -207,7 +207,7 @@ export const HeroSection = () => {
                     onClick={() => setIsFormOpen(true)}
                     className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium"
                   >
-                    Conhecer soluções
+                    Conheça o Caixa inteligente
                   </Button>
                   <Button 
                     onClick={() => setIsFormOpen(true)}
