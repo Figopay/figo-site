@@ -28,13 +28,13 @@ export const AboutSection = () => {
             Sobre a <span className="text-figo-green">Figo</span>
           </h2>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto">
-            A Figo Pay nasceu para ser o <strong>Caixa Inteligente</strong> do varejo brasileiro. Somos uma <strong>plataforma multicanal</strong> que centraliza cartões, PIX, links de pagamento e até dinheiro em um único fluxo, garantindo <strong>segurança no fechamento de caixa</strong> e controle em tempo real de todos os recebíveis.
+            A Figo Pay nasceu para ser o Caixa Inteligente do varejo brasileiro. Somos uma plataforma multicanal que centraliza cartões, PIX, links de pagamento e até dinheiro em um único fluxo, garantindo segurança no fechamento de caixa e controle em tempo real de todos os recebíveis.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            Com nossa <strong>multiadquirência inteligente</strong>, cada transação é roteada automaticamente para a melhor condição de taxa, gerando <strong>economia imediata</strong> e mais margem para o lojista. Além disso, oferecemos soluções nativas de fidelização com <strong>cashback automático</strong> e recursos operacionais que conectam vendas presenciais e remotas, simplificando a rotina e fortalecendo o relacionamento com os clientes.
+            A Figo não muda a sua rotina financeira, o varejista mantém seus contratos de adquirentes vigentes e continua operando como já está acostumado. Nosso papel é fazer você economizar com a gestão inteligente das taxas e reunir todas as informações em um único lugar, simples e transparente. Cada transação é roteada automaticamente para a melhor condição de taxa, gerando economia imediata.
           </p>
           <p className="text-lg text-figo-purple/80 max-w-3xl mx-auto mt-4">
-            Mais do que tecnologia, somos <strong>parceiros do varejista</strong> que busca segurança, eficiência e crescimento sustentável no seu negócio.
+            Mais do que tecnologia, somos parceiros do varejista que busca segurança, eficiência e crescimento sustentável no seu negócio.
           </p>
         </div>
 
