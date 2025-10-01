@@ -103,7 +103,7 @@ export const HeroSection = () => {
                       do seu negócio
                     </h1>
                     <p className="text-lg md:text-xl text-figo-purple/80 mb-8 animate-fade-in-up animate-delay-200">
-                      Muito além de maquininha, a Figo Pay é o Caixa Inteligente que centraliza todos as formas de pagamento e garante seu fechamento de caixa!!
+                      Muito além de maquininha, a Figo Pay é o Caixa Inteligente que centraliza todas as formas de pagamento e garante seu fechamento de caixa!!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
                       <Button 
