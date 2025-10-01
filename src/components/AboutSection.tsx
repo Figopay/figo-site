@@ -1,37 +1,22 @@
 
-import { Shield, CreditCard, BarChart4, Smartphone, Percent, CheckCircle } from "lucide-react";
+import { Shield, Heart, TrendingUp } from "lucide-react";
 
 export const AboutSection = () => {
   const features = [
     { 
-      icon: CreditCard, 
-      title: "Plataforma Multiadquirente", 
-      description: "Centralize todas as adquirentes em um único equipamento e tenha autonomia para escolher a melhor opção a cada venda." 
-    },
-    { 
-      icon: Percent, 
-      title: "Economia de até 20%", 
-      description: "Reduza custos com o roteamento automático da melhor taxa por transação, otimizando sua operação financeira de forma inteligente." 
-    },
-    { 
-      icon: Smartphone, 
-      title: "Pagamentos multicanal e flexíveis", 
-      description: "Aceite Pix, carteiras digitais, links de pagamento e assinaturas recorrentes com agilidade e segurança, operando via SmartPOS, Pinpad, desktop ou celular, adaptável ao seu modelo de negócio." 
-    },
-    { 
       icon: Shield, 
-      title: "Serviços financeiros integrados", 
-      description: "Ofereça ao seu cliente a conveniencia de oferecer serviços que vão além do pagamento, serviços financeiros complementares que aumentam a rentabilidade." 
+      title: "Segurança & Controle", 
+      description: "Feche seu caixa em tempo real com todos os meios de pagamento unificados (cartão, PIX e dinheiro). Mais segurança, menos erros" 
     },
     { 
-      icon: BarChart4, 
-      title: "Gestão de assinaturas inteligente", 
-      description: "Ofereça serviços recorrentes de forma prática e segura, com cobranças mensais sem comprometer o limite do cartão de crédito do cliente — ideal para fidelização e aumento da receita previsível." 
+      icon: Heart, 
+      title: "Fidelização Integrada", 
+      description: "Transforme cada venda em uma oportunidade de recompra com o cashback nativo integrado à Figo Pay." 
     },
     { 
-      icon: CheckCircle, 
-      title: "Ampla rede de varejistas", 
-      description: "Presente em +2000 estabelecimentos, ajudando o varejista a Economizar, Crescer e Gerir melhor" 
+      icon: TrendingUp, 
+      title: "Mais controle", 
+      description: "Todos os seus recebíveis, diferentes adquirentes, links de pagamento e PIX reunidos em um único painel em tempo real" 
     },
   ];
 
@@ -53,26 +38,38 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-figo-purple">
-            Principais diferenciais da <span className="text-figo-green">Figo</span>
-          </h3>
-        </div>
+        <div className="relative bg-figo-green/30 py-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+          {/* Curved edges */}
+          <div className="absolute inset-0 overflow-hidden">
+            <svg className="absolute left-0 top-0 h-full" width="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path d="M0,0 Q50,50 0,100 Z" fill="white" opacity="0.3" />
+            </svg>
+            <svg className="absolute right-0 top-0 h-full" width="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path d="M100,0 Q50,50 100,100 Z" fill="white" opacity="0.3" />
+            </svg>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="bg-figo-green/10 p-3 rounded-lg inline-block mb-4">
-                <feature.icon className="h-6 w-6 text-figo-green" />
+          <div className="relative text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-figo-purple">
+              Principais diferenciais da <span className="text-figo-green">Figo</span>
+            </h3>
+          </div>
+
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {features.map((feature, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="bg-figo-green/20 p-4 rounded-full inline-block mb-6">
+                  <feature.icon className="h-8 w-8 text-figo-purple" />
+                </div>
+                <h3 className="font-bold text-2xl text-figo-purple mb-3">{feature.title}</h3>
+                <p className="text-figo-purple/80 text-lg leading-relaxed">{feature.description}</p>
               </div>
-              <h3 className="font-bold text-xl text-figo-purple mb-2">{feature.title}</h3>
-              <p className="text-figo-purple/70">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
