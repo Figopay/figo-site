@@ -32,6 +32,15 @@ export const Footer = () => {
               <li><a href="#desafios" className="text-figo-purple/70 hover:text-figo-green transition-colors">Desafios do Varejo</a></li>
               <li><a href="#servicos" className="text-figo-purple/70 hover:text-figo-green transition-colors">Serviços</a></li>
               <li><a href="#parceiros" className="text-figo-purple/70 hover:text-figo-green transition-colors">Para Parceiros</a></li>
+              <li>
+                <Link 
+                  to="/baixar-app" 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="text-figo-purple/70 hover:text-figo-green transition-colors"
+                >
+                  Aplicativo
+                </Link>
+              </li>
             </ul>
           </div>
 
