@@ -1,5 +1,7 @@
 import { Apple, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import figoLogo from "@/assets/figopay-logo.png";
+import figoDevice from "@/assets/figo-device.png";
 
 const DownloadApp = () => {
   return (
@@ -8,9 +10,18 @@ const DownloadApp = () => {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <img 
-            src="/lovable-uploads/425a4488-2866-41f7-b642-dfe510a5e328.png" 
-            alt="Figo Logo" 
-            className="h-20 w-auto"
+            src={figoLogo} 
+            alt="Figo Pay Logo" 
+            className="h-16 w-auto"
+          />
+        </div>
+
+        {/* Imagem da Máquina */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src={figoDevice} 
+            alt="Máquina Figo Pay" 
+            className="max-w-md w-full h-auto"
           />
         </div>
 
@@ -30,8 +41,7 @@ const DownloadApp = () => {
             size="lg"
             className="w-full sm:w-auto min-w-[240px] h-14 text-lg gap-3 bg-foreground text-background hover:bg-foreground/90"
             onClick={() => {
-              // Link da App Store quando disponível
-              window.open('https://apps.apple.com/', '_blank');
+              window.open('https://apps.apple.com/br/app/figo-pay-app/id6744122248', '_blank');
             }}
           >
             <Apple className="w-7 h-7" />
@@ -45,8 +55,7 @@ const DownloadApp = () => {
             size="lg"
             className="w-full sm:w-auto min-w-[240px] h-14 text-lg gap-3 bg-foreground text-background hover:bg-foreground/90"
             onClick={() => {
-              // Link da Google Play quando disponível
-              window.open('https://play.google.com/', '_blank');
+              window.open('https://play.google.com/store/apps/details?id=com.payer.payer_app.figopay', '_blank');
             }}
           >
             <Smartphone className="w-7 h-7" />
