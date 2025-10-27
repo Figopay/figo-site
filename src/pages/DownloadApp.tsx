@@ -23,7 +23,7 @@ const DownloadApp = () => {
             <img 
               src={figoDevice} 
               alt="Máquina Figo Pay" 
-              className="max-w-md w-full h-auto"
+              className="max-w-2xl w-full h-auto"
             />
           </div>
 
