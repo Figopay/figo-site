@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -47,10 +47,6 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-figo-purple mb-4">Contato</h3>
             <ul className="space-y-3">
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-figo-green mr-2" />
-                <span className="text-figo-purple/70">+55 11 91662‑9760</span>
-              </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-figo-green mr-2" />
                 <span className="text-figo-purple/70">contato@figopay.com.br</span>
