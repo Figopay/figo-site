@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "./ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const navigation = [
   { name: "Parceiros", href: "#parceiros" },
 ];
 
-const WHATSAPP_LINK = "https://wa.me/5511916629760";
+
 
 export const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -61,12 +61,6 @@ export const Header = () => {
                 {item.name}
               </button>
             ))}
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center gap-2">
-                <Phone size={18} />
-                Chamar agora
-              </Button>
-            </a>
           </nav>
           
           {/* Mobile menu button */}
@@ -96,12 +90,6 @@ export const Header = () => {
               </button>
             ))}
             <div className="px-3 py-2">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full block">
-                <Button className="w-full bg-figo-green hover:bg-figo-green/80 text-figo-purple font-medium flex items-center justify-center gap-2">
-                  <Phone size={18} />
-                  Chamar agora
-                </Button>
-              </a>
             </div>
           </div>
         </div>
